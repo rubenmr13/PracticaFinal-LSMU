@@ -33,9 +33,8 @@
     </fragment>
     <fragment
         android:id="@+id/basketFragment"
-        android:name="com.example.fruitshop.Basket.BasketFragment"
-        android:label="@string/basket_text"
-        tools:layout="@layout/fragment_basket" />
+        android:name="com.example.fruitshop.basket.BasketFragment"
+        android:label="@string/basket_text" />
     <fragment
         android:id="@+id/fishMarketFragment"
         android:name="com.example.fruitshop.fishMarket.FishMarketFragment"
