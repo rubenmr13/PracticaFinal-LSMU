@@ -1,4 +1,4 @@
-package com.example.fruitshop
+package com.example.fruitshop.user
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

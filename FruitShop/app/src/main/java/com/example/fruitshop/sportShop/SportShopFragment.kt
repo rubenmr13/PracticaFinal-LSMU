@@ -1,4 +1,4 @@
-package com.example.fruitshop
+package com.example.fruitshop.sportShop
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.example.fruitshop.R
 import com.example.fruitshop.databinding.FragmentSportShopBinding
 
 class SportShopFragment : Fragment() {

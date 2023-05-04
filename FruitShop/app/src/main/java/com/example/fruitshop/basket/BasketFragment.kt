@@ -1,4 +1,4 @@
-package com.example.fruitshop
+package com.example.fruitshop.basket
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -11,6 +11,11 @@ import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import com.example.fruitshop.*
+import com.example.fruitshop.butcher.ButcherShopViewModel
+import com.example.fruitshop.fishMarket.FishMarketViewModel
+import com.example.fruitshop.fruitShop.FruitShopViewModel
+import com.example.fruitshop.sportShop.SportShopViewModel
 import com.example.fruitshop.databinding.FragmentBasketBinding
 
 class BasketFragment : Fragment() {

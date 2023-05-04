@@ -2,12 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".UserFragment">
+    tools:context=".user.UserFragment">
 
     <data>
         <variable
             name="viewModel"
-            type = "com.example.fruitshop.UserViewModel"/>
+            type = "com.example.fruitshop.user.UserViewModel"/>
     </data>
 
 

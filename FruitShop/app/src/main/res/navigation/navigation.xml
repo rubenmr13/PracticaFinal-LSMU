@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/fruitShopFragment"
-        android:name="com.example.fruitshop.FruitShopFragment"
+        android:name="com.example.fruitshop.fruitShop.FruitShopFragment"
         android:label="@string/label_fruit_shop">
         <action
             android:id="@+id/action_fruitShopFragment_to_basketFragment"
@@ -33,12 +33,12 @@
     </fragment>
     <fragment
         android:id="@+id/basketFragment"
-        android:name="com.example.fruitshop.BasketFragment"
+        android:name="com.example.fruitshop.Basket.BasketFragment"
         android:label="@string/basket_text"
         tools:layout="@layout/fragment_basket" />
     <fragment
         android:id="@+id/fishMarketFragment"
-        android:name="com.example.fruitshop.FishMarketFragment"
+        android:name="com.example.fruitshop.fishMarket.FishMarketFragment"
         android:label="@string/label_fish_market"
         tools:layout="@layout/fragment_fish_market" >
         <action
@@ -47,7 +47,7 @@
     </fragment>
     <fragment
         android:id="@+id/butcherShopFragment"
-        android:name="com.example.fruitshop.ButcherShopFragment"
+        android:name="com.example.fruitshop.butcher.ButcherShopFragment"
         android:label="@string/label_butcher_shop"
         tools:layout="@layout/fragment_butcher_shop" >
         <action
@@ -56,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/sportShopFragment"
-        android:name="com.example.fruitshop.SportShopFragment"
+        android:name="com.example.fruitshop.sportShop.SportShopFragment"
         android:label="@string/label_sport_shop"
         tools:layout="@layout/fragment_sport_shop" >
         <action
@@ -65,7 +65,7 @@
     </fragment>
     <fragment
         android:id="@+id/userFragment"
-        android:name="com.example.fruitshop.UserFragment"
+        android:name="com.example.fruitshop.user.UserFragment"
         android:label="@string/register_user"
         tools:layout="@layout/fragment_user" >
         <action

@@ -1,8 +1,10 @@
-package com.example.fruitshop
+package com.example.fruitshop.sportShop
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.fruitshop.R
+import com.example.fruitshop.sportShop.SportShopFragment
 
 class SportShopViewModel: ViewModel() {
 

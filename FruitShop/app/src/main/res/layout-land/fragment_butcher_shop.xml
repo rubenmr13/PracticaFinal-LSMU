@@ -2,12 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".FruitShopFragment">
+    tools:context=".fruitShop.FruitShopFragment">
 
     <data>
         <variable
             name="viewModel"
-            type = "com.example.fruitshop.ButcherShopViewModel"/>
+            type = "com.example.fruitshop.butcher.ButcherShopViewModel"/>
     </data>
 
     <LinearLayout
