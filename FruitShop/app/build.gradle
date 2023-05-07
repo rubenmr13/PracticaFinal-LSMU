@@ -35,6 +35,8 @@ android {
         dataBinding true
     }
 
+    apply plugin: 'kotlin-kapt'
+
 }
 
 dependencies {
@@ -62,8 +64,14 @@ dependencies {
 
     // Material Design
     implementation "com.google.android.material:material:1.8.0"
-
     implementation 'androidx.fragment:fragment-ktx:1.5.6'
+
+
+    //Room
+    implementation "androidx.room:room-runtime:2.5.1"
+    implementation "androidx.room:room-ktx:2.5.1"
+    kapt "androidx.room:room-compiler:2.5.1"
+    testImplementation 'junit:junit:4.+'
 
 
 

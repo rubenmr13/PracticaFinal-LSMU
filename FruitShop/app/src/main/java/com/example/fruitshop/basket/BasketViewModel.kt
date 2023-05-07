@@ -14,5 +14,4 @@ class BasketViewModel: ViewModel() {
         val total = totalFruits + totalFish + totalMeat + totalSport
         _totalFinal.value = total
     }
-
 }

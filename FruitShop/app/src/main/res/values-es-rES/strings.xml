@@ -91,6 +91,9 @@
     <string name="password">Contraseña</string>
     <string name="welcome_user">Registro</string>
     <string name="register_user">Registro Usuario</string>
+    <string name="text_registered_user">El usuario ya ha sido registrado</string>
+    <string name="text_user_no_registered">El usuario no existe, registrate</string>
+    <string name="text_incorrect_password">Contraseña incorrecta</string>
 
     //CHAT
     <string name="chat_header" translatable="false">Chat de la tienda</string>

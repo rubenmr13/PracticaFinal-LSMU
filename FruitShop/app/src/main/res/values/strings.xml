@@ -129,6 +129,9 @@
     <string name="register_user">Register User</string>
     <string name="log_out">Log Out</string>
     <string name="text_user_welcome">Welcome</string>
+    <string name="text_registered_user">The user has already been registered</string>
+    <string name="text_user_no_registered">The user dont not exist, register</string>
+    <string name="text_incorrect_password">Incorrect password</string>
 
 
     //CHAT
