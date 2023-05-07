@@ -138,6 +138,7 @@
     <string name="chat_header">Chat of shop</string>
     <string name="send_text">Write here</string>
     <string name="send">Send</string>
+    <string name="unregistered_user">Unregistered user, please log in</string>
 
     //INBOX
     <string name="inbox_header">Inbox of shop</string>
@@ -146,7 +147,6 @@
 
     //BASKET
     <string name="buy_all">Buy</string>
-
 
 
 </resources>

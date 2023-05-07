@@ -101,6 +101,7 @@
     <string name="send">Enviar</string>
     <string name="log_out">Cerrar Sesion</string>
     <string name="text_user_welcome">Bienvenido</string>
+    <string name="unregistered_user">Usuario no registrado, por favor inicie sesion </string>
 
 
     //INBOX

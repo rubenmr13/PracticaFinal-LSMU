@@ -12,12 +12,14 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import com.example.fruitshop.databinding.FragmentChatBinding
+import com.example.fruitshop.user.NameUserViewModel
 
 
 class ChatFragment : Fragment() {
 
     private lateinit var binding: FragmentChatBinding
     private val chatViewModel: ShopViewModel by activityViewModels()
+    private val nameUserViewModel: NameUserViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +31,8 @@ class ChatFragment : Fragment() {
     ): View? {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_chat, container, false)
+
+        viewsChat(nameUserViewModel.getUser())
 
         chatViewModel.messageChat.observe(viewLifecycleOwner, Observer {
             binding.receivedText.text = chatViewModel.getMessageChat()
@@ -55,5 +59,19 @@ class ChatFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    fun viewsChat(name:String){
+        if(name == ""){
+            binding.sendText.visibility = View.GONE
+            binding.sendButton.visibility = View.GONE
+            binding.unregisteredUser.visibility = View.VISIBLE
+            chatViewModel.deleteMessage()
+
+        }else{
+            binding.sendText.visibility = View.VISIBLE
+            binding.sendButton.visibility = View.VISIBLE
+            binding.unregisteredUser.visibility = View.GONE
+        }
     }
 }
