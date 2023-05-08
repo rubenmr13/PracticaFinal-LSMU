@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".basket.PurchaseProcessFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.fruitshop.basket.PurchaseProcessViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPurchase"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"
+            android:text="@string/purchase_title"
+            android:textSize="20sp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/tvBuyProcess"
+            android:layout_width="393dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/blue_3F88C5"
+            android:text="@string/buy_process_title"
+            android:textSize="15sp" />
+
+        <EditText
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardNumber"
+            android:hint="@string/card_number"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_edittext"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/expirationDate"
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/border_edittext"
+                android:hint="@string/expire_date"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/cvcText"
+                android:layout_width="84dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:background="@drawable/border_edittext"
+                android:hint="@string/cvc_number"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="393dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/blue_3F88C5"
+            android:text="@string/address_text"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etCountry"
+                android:hint="@string/country_text"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/border_edittext"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/etCity"
+                android:hint="@string/city_text"
+                android:textAlignment="center"
+                android:layout_marginStart="100dp"
+                android:textSize="15sp"
+                android:background="@drawable/border_edittext"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etStreet"
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/border_edittext"
+                android:hint="@string/street_text"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etNumber"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:background="@drawable/border_edittext"
+                android:hint="@string/number_text"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonBuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:backgroundTint="@color/green_08A045"
+                android:layout_marginTop="10dp"
+                android:text="@string/buy_text"/>
+
+            <Button
+                android:id="@+id/buttonBasket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:backgroundTint="@color/red_cc0000"
+                android:layout_marginTop="10dp"
+                android:text="@string/back_text"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

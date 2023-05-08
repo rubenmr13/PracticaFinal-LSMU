@@ -49,6 +49,30 @@ class FruitShopViewModel: ViewModel() {
          //ponemos a 0 el seekBar
     }
 
+    fun deleteApple(){
+        val appleCount = _apple.value?: 0
+        _totalFruit.value = _totalFruit.value?.minus(appleCount)
+        _apple.value = 0
+    }
+
+    fun deletePear(){
+        val pearCount = _pear.value?: 0
+        _totalFruit.value = _totalFruit.value?.minus(pearCount)
+        _pear.value = 0
+    }
+
+    fun deleteOrange(){
+        val orangeCount = _orange.value?: 0
+        _totalFruit.value = _totalFruit.value?.minus(orangeCount)
+        _orange.value = 0
+    }
+
+    fun deletePlum(){
+        val plumCount = _plum.value?: 0
+        _totalFruit.value = _totalFruit.value?.minus(plumCount)
+        _plum.value = 0
+    }
+
     fun addFruit(quantity_number: Int, context: FruitShopFragment){
         val number: Int
 

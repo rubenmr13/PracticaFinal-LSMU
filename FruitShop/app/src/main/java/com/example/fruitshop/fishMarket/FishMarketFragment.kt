@@ -22,9 +22,6 @@ class FishMarketFragment : Fragment() {
     var fish = mutableListOf<String>()
     lateinit var images : List<Int>
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -74,7 +71,8 @@ class FishMarketFragment : Fragment() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
                 views(binding.salmonText, binding.giltHeadBreamText, binding.seaBassText, binding.redMulletText, binding.salmonImage,
-                    binding.giltHeadBreamImage, binding.seaBassImage, binding.redMulletImage, binding.deleteBasket) //Muestra las views cuando cambia la orientacion
+                    binding.giltHeadBreamImage, binding.seaBassImage, binding.redMulletImage, binding.deleteBasket,
+                    binding.btnRemoveSalmon, binding.btnRemoveGiltHeadBream, binding.btnRemoveSeaBass, binding.btnRemoveRedMullet) //Muestra las views cuando cambia la orientacion
                 fishMarketViewModel.saveFish(binding.spinnerFishShop.selectedItem.toString())
                 //usamos el observer de fruit para actualizar las vistas
             }
@@ -100,15 +98,56 @@ class FishMarketFragment : Fragment() {
             binding.seekBar.progress=0 //ponemos a 0 el seekBar
             fishMarketViewModel.calculatePriceFish() //calculamos el precio y lo añadimos al bundle
             views(binding.salmonText, binding.giltHeadBreamText, binding.seaBassText, binding.redMulletText, binding.salmonImage,
-                binding.giltHeadBreamImage, binding.seaBassImage, binding.redMulletImage, binding.deleteBasket)
+                binding.giltHeadBreamImage, binding.seaBassImage, binding.redMulletImage, binding.deleteBasket,
+                binding.btnRemoveSalmon, binding.btnRemoveGiltHeadBream, binding.btnRemoveSeaBass, binding.btnRemoveRedMullet)
         }
 
         binding.deleteBasket.setOnClickListener{
             fishMarketViewModel.deleteItemFish()
             binding.seekBar.progress=0
             views(binding.salmonText, binding.giltHeadBreamText, binding.seaBassText, binding.redMulletText, binding.salmonImage,
-                binding.giltHeadBreamImage, binding.seaBassImage, binding.redMulletImage, binding.deleteBasket)
+                binding.giltHeadBreamImage, binding.seaBassImage, binding.redMulletImage, binding.deleteBasket,
+                binding.btnRemoveSalmon, binding.btnRemoveGiltHeadBream, binding.btnRemoveSeaBass, binding.btnRemoveRedMullet)
         }
+
+        binding.btnRemoveSalmon.setOnClickListener {
+            fishMarketViewModel.deleteSalmon()
+            fishMarketViewModel.calculatePriceFish()
+
+            views(binding.salmonText, binding.giltHeadBreamText, binding.seaBassText, binding.redMulletText, binding.salmonImage,
+                binding.giltHeadBreamImage, binding.seaBassImage, binding.redMulletImage, binding.deleteBasket,
+                binding.btnRemoveSalmon, binding.btnRemoveGiltHeadBream, binding.btnRemoveSeaBass, binding.btnRemoveRedMullet)
+        }
+
+        binding.btnRemoveGiltHeadBream.setOnClickListener {
+            fishMarketViewModel.deleteGiltHeadBream()
+            fishMarketViewModel.calculatePriceFish()
+
+            views(binding.salmonText, binding.giltHeadBreamText, binding.seaBassText, binding.redMulletText, binding.salmonImage,
+                binding.giltHeadBreamImage, binding.seaBassImage, binding.redMulletImage, binding.deleteBasket,
+                binding.btnRemoveSalmon, binding.btnRemoveGiltHeadBream, binding.btnRemoveSeaBass, binding.btnRemoveRedMullet)
+        }
+
+
+        binding.btnRemoveSeaBass.setOnClickListener {
+            fishMarketViewModel.deleteSeaBass()
+            fishMarketViewModel.calculatePriceFish()
+
+            views(binding.salmonText, binding.giltHeadBreamText, binding.seaBassText, binding.redMulletText, binding.salmonImage,
+                binding.giltHeadBreamImage, binding.seaBassImage, binding.redMulletImage, binding.deleteBasket,
+                binding.btnRemoveSalmon, binding.btnRemoveGiltHeadBream, binding.btnRemoveSeaBass, binding.btnRemoveRedMullet)
+        }
+
+
+        binding.btnRemoveRedMullet.setOnClickListener {
+            fishMarketViewModel.deleteRedMullet()
+            fishMarketViewModel.calculatePriceFish()
+
+            views(binding.salmonText, binding.giltHeadBreamText, binding.seaBassText, binding.redMulletText, binding.salmonImage,
+                binding.giltHeadBreamImage, binding.seaBassImage, binding.redMulletImage, binding.deleteBasket,
+                binding.btnRemoveSalmon, binding.btnRemoveGiltHeadBream, binding.btnRemoveSeaBass, binding.btnRemoveRedMullet)
+        }
+
 
         binding.basketImage.setOnClickListener {
             findNavController().navigate(R.id.action_fishMarketFragment_to_basketFragment)
@@ -174,39 +213,42 @@ class FishMarketFragment : Fragment() {
         binding.priceFishText.text = getString(R.string.price_fish_text)+" "+ String.format("%.2f",fishMarketViewModel.calculateFish(quantity_number, this )) +"€"
     }
 
-    fun active_views(fish_text: TextView, fish_image: ImageView){
+    fun active_views(fish_text: TextView, fish_image: ImageView, fish_button: ImageView){
         fish_text.visibility = View.VISIBLE //mostramos la vista
         fish_image.visibility = View.VISIBLE
+        fish_button.visibility = View.VISIBLE
     }
 
-    fun desactive_views(fish_text: TextView, fish_image: ImageView){
+    fun desactive_views(fish_text: TextView, fish_image: ImageView, fish_button: ImageView){
         fish_text.visibility = View.GONE //mostramos la vista
         fish_image.visibility = View.GONE
+        fish_button.visibility = View.GONE
     }
 
     //funcion para mostrar las views cuando cambia la orientacion
     fun views(salmon_text: TextView, gilt_head_bream_text: TextView, sea_bass_text: TextView,
               red_mullet_text: TextView, salmon_image: ImageView, gilt_head_bream_image: ImageView,
-              sea_bass_image: ImageView, red_mullet_image: ImageView, delete_basket: Button){
+              sea_bass_image: ImageView, red_mullet_image: ImageView, delete_basket: Button,
+              salmon_button: ImageView, bream_button: ImageView, bass_button: ImageView, mullet_button: ImageView){
         if((fishMarketViewModel.salmon.value ?: 0) > 0){
-            active_views(salmon_text, salmon_image)
+            active_views(salmon_text, salmon_image, salmon_button)
         }else{
-            desactive_views(salmon_text, salmon_image)
+            desactive_views(salmon_text, salmon_image, salmon_button)
         }
         if((fishMarketViewModel.gilt_head_bream.value ?: 0) > 0){
-            active_views(gilt_head_bream_text, gilt_head_bream_image)
+            active_views(gilt_head_bream_text, gilt_head_bream_image, bream_button)
         }else{
-            desactive_views(gilt_head_bream_text, gilt_head_bream_image)
+            desactive_views(gilt_head_bream_text, gilt_head_bream_image, bream_button)
         }
         if((fishMarketViewModel.sea_bass.value ?: 0) > 0){
-            active_views(sea_bass_text, sea_bass_image)
+            active_views(sea_bass_text, sea_bass_image, bass_button)
         }else{
-            desactive_views(sea_bass_text, sea_bass_image)
+            desactive_views(sea_bass_text, sea_bass_image, bass_button)
         }
         if((fishMarketViewModel.red_mullet.value ?: 0) > 0){
-            active_views(red_mullet_text, red_mullet_image)
+            active_views(red_mullet_text, red_mullet_image, mullet_button)
         }else{
-            desactive_views(red_mullet_text, red_mullet_image)
+            desactive_views(red_mullet_text, red_mullet_image, mullet_button)
         }
         if((fishMarketViewModel.totalFish.value ?: 0.0) > 0.0){
             delete_basket.visibility = View.VISIBLE

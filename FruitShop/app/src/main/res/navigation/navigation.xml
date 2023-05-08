@@ -34,7 +34,11 @@
     <fragment
         android:id="@+id/basketFragment"
         android:name="com.example.fruitshop.basket.BasketFragment"
-        android:label="@string/basket_text" />
+        android:label="@string/basket_text" >
+        <action
+            android:id="@+id/action_basketFragment_to_purchaseProcessFragment"
+            app:destination="@id/purchaseProcessFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fishMarketFragment"
         android:name="com.example.fruitshop.fishMarket.FishMarketFragment"
@@ -81,4 +85,25 @@
         android:name="com.example.fruitshop.InboxFragment"
         android:label="@string/inbox_text"
         tools:layout="@layout/fragment_inbox" />
+    <fragment
+        android:id="@+id/purchaseProcessFragment"
+        android:name="com.example.fruitshop.basket.PurchaseProcessFragment"
+        android:label="Checkout"
+        tools:layout="@layout/fragment_purchase_process" >
+        <action
+            android:id="@+id/action_purchaseProcessFragment_to_purchaseCompletedFragment"
+            app:destination="@id/purchaseCompletedFragment" />
+        <action
+            android:id="@+id/action_purchaseProcessFragment_to_basketFragment"
+            app:destination="@id/basketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/purchaseCompletedFragment"
+        android:name="com.example.fruitshop.basket.PurchaseCompletedFragment"
+        android:label="@string/purchase_confirmed"
+        tools:layout="@layout/fragment_purchase_completed" >
+        <action
+            android:id="@+id/action_purchaseCompletedFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
 </navigation>

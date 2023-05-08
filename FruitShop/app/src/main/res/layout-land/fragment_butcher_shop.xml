@@ -170,6 +170,16 @@
                         android:layout_marginTop="10dp"
                         android:text="@string/cow_text"
                         android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/btnRemoveCow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:clickable="true"
+                        android:src="@drawable/baseline_delete_24" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -193,6 +203,15 @@
                         android:layout_marginTop="10dp"
                         android:text="@string/chicken_text"
                         android:textSize="16sp"/>
+
+                    <ImageView
+                        android:id="@+id/btnRemoveChicken"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:clickable="true"
+                        android:src="@drawable/baseline_delete_24" />
 
                 </LinearLayout>
 
@@ -218,6 +237,15 @@
                         android:text="@string/pig_text"
                         android:textSize="16sp" />
 
+                    <ImageView
+                        android:id="@+id/btnRemovePig"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:clickable="true"
+                        android:src="@drawable/baseline_delete_24" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -241,6 +269,16 @@
                         android:layout_marginTop="15dp"
                         android:text="@string/mince_text"
                         android:textSize="16sp"/>
+
+                    <ImageView
+                        android:id="@+id/btnRemoveMince"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="12dp"
+                        android:clickable="true"
+                        android:src="@drawable/baseline_delete_24" />
+
                 </LinearLayout>
 
                 <TextView
@@ -282,21 +320,6 @@
             </LinearLayout>
 
         </LinearLayout>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/creator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:text="@string/creator"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </layout>

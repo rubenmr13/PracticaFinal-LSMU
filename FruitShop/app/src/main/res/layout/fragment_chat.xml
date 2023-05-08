@@ -54,7 +54,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:backgroundTint="@color/grey_717568"
-                    android:layout_weight="1"
+                    android:ems="10"
                     android:hint="@string/send_text"
                     android:padding="16dp" />
 
@@ -64,20 +64,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="40dp"
+                    android:layout_weight="1"
                     android:backgroundTint="@color/blue_3F88C5"
                     android:text="@string/send" />
+
             </LinearLayout>
-
-
-            <TextView
-                android:id="@+id/unregistered_user"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="80dp"
-                android:text="@string/unregistered_user"
-                android:textSize="16sp" />
-
         </LinearLayout>
     </ScrollView>
 </layout>

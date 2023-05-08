@@ -29,7 +29,6 @@
 
     <string name="basket">Basket</string>
     <string name="total">Total</string>
-    <string name="creator" translatable="false">By Rubén Manzanas Rodríguez</string>
 
     //MENU SHOP
     <string name="menu_shop">Shops Paco</string>
@@ -129,16 +128,12 @@
     <string name="register_user">Register User</string>
     <string name="log_out">Log Out</string>
     <string name="text_user_welcome">Welcome</string>
-    <string name="text_registered_user">The user has already been registered</string>
-    <string name="text_user_no_registered">The user dont not exist, register</string>
-    <string name="text_incorrect_password">Incorrect password</string>
 
 
     //CHAT
     <string name="chat_header">Chat of shop</string>
     <string name="send_text">Write here</string>
     <string name="send">Send</string>
-    <string name="unregistered_user">Unregistered user, please log in</string>
 
     //INBOX
     <string name="inbox_header">Inbox of shop</string>
@@ -147,6 +142,30 @@
 
     //BASKET
     <string name="buy_all">Buy</string>
+    <string name="remove_item">Remove</string>
+
+    //PURCHASE PROCESS
+    <string name="purchase_title">CHECKOUT</string>
+    <string name="buy_process_title">1. PAYMENT METHOD</string>
+    <string name="card_number">card number</string>
+    <string name="expire_date">expiration date: XX/XX</string>
+    <string name="cvc_number">CVC</string>
+    <string name="address_text">2. ADDRESS</string>
+    <string name="city_text">city</string>
+    <string name="street_text">street</string>
+    <string name="number_text">number</string>
+    <string name="pay_text">PAY</string>
+    <string name="total_text">TOTAL: </string>
+    <string name="buy_text">BUY</string>
+    <string name="back_text">BACK TO THE BASKET</string>
+    <string name="wrong_field">Make sure all fields are right</string>
+    <string name="country_text">country</string>
+
+
+    //PURCHASE COMPLETED
+    <string name="purchase_confirmed">PURCHASE CONFIRMED</string>
+    <string name="thank_you">THANK YOU FOR BUYING AT SHOPS PACO</string>
+    <string name="back_button">MAIN PAGE</string>
 
 
 </resources>

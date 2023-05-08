@@ -14,6 +14,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
         android:orientation="vertical">
 
         <TextView
@@ -36,8 +37,7 @@
             android:backgroundTint="@color/blue_104d89"
             android:ems="10"
             android:hint="@string/user"
-            android:padding="16dp"
-            android:text="@={viewModel.name}"/>
+            android:padding="16dp" />
 
         <EditText
             android:id="@+id/password_editText"
@@ -48,8 +48,7 @@
             android:ems="10"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:padding="16dp"
-            android:text="@={viewModel.password}"/>
+            android:padding="16dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,9 +84,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textSize="20sp"
             android:layout_marginBottom="40dp"
-            android:text=""
-            android:textSize="20sp" />
+            android:text="" />
 
         <Button
             android:id="@+id/log_out"
@@ -97,21 +96,5 @@
             android:backgroundTint="@color/red_cc0000"
             android:text="@string/log_out"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/creator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:text="@string/creator"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </layout>

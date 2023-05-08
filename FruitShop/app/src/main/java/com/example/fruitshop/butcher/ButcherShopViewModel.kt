@@ -100,4 +100,28 @@ class ButcherShopViewModel: ViewModel() {
         return totalMeat
     }
 
+    fun deleteCow() {
+        val cowCount = _cow.value?: 0
+        _totalMeat.value = _totalMeat.value?.minus(cowCount)
+        _cow.value = 0
+    }
+
+    fun deletePig() {
+        val pigCount = _pig.value?: 0
+        _totalMeat.value = _totalMeat.value?.minus(pigCount)
+        _pig.value = 0
+    }
+
+    fun deleteChicken() {
+        val chickenCount = _chicken.value?: 0
+        _totalMeat.value = _totalMeat.value?.minus(chickenCount)
+        _chicken.value = 0
+    }
+
+    fun deleteMince() {
+        val minceCount = _mince.value?: 0
+        _totalMeat.value = _totalMeat.value?.minus(minceCount)
+        _mince.value = 0
+    }
+
 }

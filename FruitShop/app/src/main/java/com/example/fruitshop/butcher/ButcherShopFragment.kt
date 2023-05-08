@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.fruitshop.R
 import com.example.fruitshop.databinding.FragmentButcherShopBinding
+import kotlin.math.min
 
 class ButcherShopFragment : Fragment() {
 
@@ -76,7 +77,8 @@ class ButcherShopFragment : Fragment() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
                 views(binding.cowText, binding.chickenText, binding.pigText, binding.minceText, binding.cowImage,
-                    binding.chickenImage, binding.pigImage, binding.minceImage, binding.deleteBasket) //Muestra las views cuando cambia la orientacion
+                    binding.chickenImage, binding.pigImage, binding.minceImage, binding.deleteBasket,
+                    binding.btnRemoveCow, binding.btnRemoveChicken, binding.btnRemovePig, binding.btnRemoveMince) //Muestra las views cuando cambia la orientacion
 
                 butcherShopViewModel.saveMeat(binding.spinnerButcherShop.selectedItem.toString())
                 //usamos el observer de fruit para actualizar las vistas
@@ -105,14 +107,52 @@ class ButcherShopFragment : Fragment() {
             binding.seekBar.progress=0 //ponemos a 0 el seekBar
             butcherShopViewModel.calculatePriceMeat() //calculamos el precio y lo añadimos al bundle
             views(binding.cowText, binding.chickenText, binding.pigText, binding.minceText, binding.cowImage,
-                binding.chickenImage, binding.pigImage, binding.minceImage, binding.deleteBasket)
+                binding.chickenImage, binding.pigImage, binding.minceImage, binding.deleteBasket,
+                binding.btnRemoveCow, binding.btnRemoveChicken, binding.btnRemovePig, binding.btnRemoveMince)
         }
 
         binding.deleteBasket.setOnClickListener{
             butcherShopViewModel.deleteItemMeat()
             binding.seekBar.progress=0
             views(binding.cowText, binding.chickenText, binding.pigText, binding.minceText, binding.cowImage,
-                binding.chickenImage, binding.pigImage, binding.minceImage, binding.deleteBasket)
+                binding.chickenImage, binding.pigImage, binding.minceImage, binding.deleteBasket,
+                binding.btnRemoveCow, binding.btnRemoveChicken, binding.btnRemovePig, binding.btnRemoveMince)
+        }
+
+        binding.btnRemoveCow.setOnClickListener {
+            butcherShopViewModel.deleteCow()
+            butcherShopViewModel.calculatePriceMeat()
+
+            views(binding.cowText, binding.chickenText, binding.pigText, binding.minceText, binding.cowImage,
+                binding.chickenImage, binding.pigImage, binding.minceImage, binding.deleteBasket,
+                binding.btnRemoveCow, binding.btnRemoveChicken, binding.btnRemovePig, binding.btnRemoveMince)
+        }
+
+        binding.btnRemoveChicken.setOnClickListener {
+            butcherShopViewModel.deleteChicken()
+            butcherShopViewModel.calculatePriceMeat()
+
+            views(binding.cowText, binding.chickenText, binding.pigText, binding.minceText, binding.cowImage,
+                binding.chickenImage, binding.pigImage, binding.minceImage, binding.deleteBasket,
+                binding.btnRemoveCow, binding.btnRemoveChicken, binding.btnRemovePig, binding.btnRemoveMince)
+        }
+
+        binding.btnRemovePig.setOnClickListener {
+            butcherShopViewModel.deletePig()
+            butcherShopViewModel.calculatePriceMeat()
+
+            views(binding.cowText, binding.chickenText, binding.pigText, binding.minceText, binding.cowImage,
+                binding.chickenImage, binding.pigImage, binding.minceImage, binding.deleteBasket,
+                binding.btnRemoveCow, binding.btnRemoveChicken, binding.btnRemovePig, binding.btnRemoveMince)
+        }
+
+        binding.btnRemoveMince.setOnClickListener {
+            butcherShopViewModel.deleteMince()
+            butcherShopViewModel.calculatePriceMeat()
+
+            views(binding.cowText, binding.chickenText, binding.pigText, binding.minceText, binding.cowImage,
+                binding.chickenImage, binding.pigImage, binding.minceImage, binding.deleteBasket,
+                binding.btnRemoveCow, binding.btnRemoveChicken, binding.btnRemovePig, binding.btnRemoveMince)
         }
 
         binding.basketImage.setOnClickListener {
@@ -182,40 +222,43 @@ class ButcherShopFragment : Fragment() {
         binding.priceMeatText.text = getString(R.string.price_meat_text)+" "+ String.format("%.2f",butcherShopViewModel.calculateMeat(quantity_number, this )) +"€"
     }
 
-    fun active_views(meat_text: TextView, meat_image: ImageView){
+    fun active_views(meat_text: TextView, meat_image: ImageView, meat_button: ImageView){
         meat_text.visibility = View.VISIBLE //mostramos la vista
         meat_image.visibility = View.VISIBLE
+        meat_button.visibility = View.VISIBLE
     }
 
-    fun desactive_views(meat_text: TextView, meat_image: ImageView){
+    fun desactive_views(meat_text: TextView, meat_image: ImageView, meat_button: ImageView){
         meat_text.visibility = View.GONE //mostramos la vista
         meat_image.visibility = View.GONE
+        meat_button.visibility = View.GONE
     }
 
     //funcion para mostrar las views cuando cambia la orientacion
     fun views(cow_text: TextView, chicken_text: TextView, pig_text: TextView,
               mince_text: TextView, cow_image: ImageView, chicken_image: ImageView,
-              pig_image: ImageView, mince_image: ImageView, delete_basket: Button
+              pig_image: ImageView, mince_image: ImageView, delete_basket: Button,
+              cow_button: ImageView, chicken_button: ImageView, pig_button: ImageView, mince_button: ImageView
     ){
         if((butcherShopViewModel.cow.value ?: 0) > 0){
-            active_views(cow_text, cow_image)
+            active_views(cow_text, cow_image, cow_button)
         }else{
-            desactive_views(cow_text, cow_image)
+            desactive_views(cow_text, cow_image, cow_button)
         }
         if((butcherShopViewModel.chicken.value ?: 0) > 0){
-            active_views(chicken_text, chicken_image)
+            active_views(chicken_text, chicken_image, chicken_button)
         }else{
-            desactive_views(chicken_text, chicken_image)
+            desactive_views(chicken_text, chicken_image, chicken_button)
         }
         if((butcherShopViewModel.pig.value ?: 0) > 0){
-            active_views(pig_text, pig_image)
+            active_views(pig_text, pig_image, pig_button)
         }else{
-            desactive_views(pig_text, pig_image)
+            desactive_views(pig_text, pig_image, pig_button)
         }
         if((butcherShopViewModel.mince.value ?: 0) > 0){
-            active_views(mince_text, mince_image)
+            active_views(mince_text, mince_image, mince_button)
         }else{
-            desactive_views(mince_text, mince_image)
+            desactive_views(mince_text, mince_image, mince_button)
         }
         if((butcherShopViewModel.totalMeat.value ?: 0.0) > 0.0){
             delete_basket.visibility = View.VISIBLE

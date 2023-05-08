@@ -75,7 +75,8 @@ class FruitShopFragment : Fragment() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
                 views(binding.appleText, binding.pearText, binding.orangeText, binding.plumText, binding.appleImage,
-                    binding.pearImage, binding.orangeImage, binding.plumImage, binding.deleteBasket) //Muestra las views cuando cambia la orientacion
+                    binding.pearImage, binding.orangeImage, binding.plumImage, binding.deleteBasket,
+                    binding.btnRemoveApple, binding.btnRemovePear, binding.btnRemoveOrange, binding.btnRemovePlum) //Muestra las views cuando cambia la orientacion
                 fruitShopViewModel.saveFruit(binding.spinnerFruitShop.selectedItem.toString())
             }
 
@@ -103,14 +104,57 @@ class FruitShopFragment : Fragment() {
             fruitShopViewModel.calculatePriceFruit() //calculamos el precio y lo añadimos al bundle
             views(binding.appleText, binding.pearText, binding.orangeText , binding.plumText,
                 binding.appleImage, binding.pearImage, binding.orangeImage, binding.plumImage,
-                binding.deleteBasket)
+                binding.deleteBasket,
+                binding.btnRemoveApple, binding.btnRemovePear, binding.btnRemoveOrange, binding.btnRemovePlum)
         }
 
         binding.deleteBasket.setOnClickListener{
             fruitShopViewModel.deleteItemFruit()
             binding.seekBar.progress=0
             views(binding.appleText, binding.pearText, binding.orangeText , binding.plumText,binding.appleImage, binding.pearImage,
-                binding.orangeImage, binding.plumImage, binding.deleteBasket)
+                binding.orangeImage, binding.plumImage, binding.deleteBasket,
+                binding.btnRemoveApple, binding.btnRemovePear, binding.btnRemoveOrange, binding.btnRemovePlum)
+        }
+
+        binding.btnRemoveApple.setOnClickListener {
+            fruitShopViewModel.deleteApple()
+            fruitShopViewModel.calculatePriceFruit()
+
+            fruitShopViewModel.calculatePriceFruit()
+            views(binding.appleText, binding.pearText, binding.orangeText , binding.plumText,
+                binding.appleImage, binding.pearImage, binding.orangeImage, binding.plumImage,
+                binding.deleteBasket,
+                binding.btnRemoveApple, binding.btnRemovePear, binding.btnRemoveOrange, binding.btnRemovePlum)
+        }
+
+        binding.btnRemovePear.setOnClickListener {
+            fruitShopViewModel.deletePear()
+            fruitShopViewModel.calculatePriceFruit()
+
+            views(binding.appleText, binding.pearText, binding.orangeText , binding.plumText,
+                binding.appleImage, binding.pearImage, binding.orangeImage, binding.plumImage,
+                binding.deleteBasket,
+                binding.btnRemoveApple, binding.btnRemovePear, binding.btnRemoveOrange, binding.btnRemovePlum)
+        }
+
+        binding.btnRemoveOrange.setOnClickListener {
+            fruitShopViewModel.deleteOrange()
+            fruitShopViewModel.calculatePriceFruit()
+
+            views(binding.appleText, binding.pearText, binding.orangeText , binding.plumText,
+                binding.appleImage, binding.pearImage, binding.orangeImage, binding.plumImage,
+                binding.deleteBasket,
+                binding.btnRemoveApple, binding.btnRemovePear, binding.btnRemoveOrange, binding.btnRemovePlum)
+        }
+
+        binding.btnRemovePlum.setOnClickListener {
+            fruitShopViewModel.deletePlum()
+            fruitShopViewModel.calculatePriceFruit()
+
+            views(binding.appleText, binding.pearText, binding.orangeText , binding.plumText,
+                binding.appleImage, binding.pearImage, binding.orangeImage, binding.plumImage,
+                binding.deleteBasket,
+                binding.btnRemoveApple, binding.btnRemovePear, binding.btnRemoveOrange, binding.btnRemovePlum)
         }
 
         binding.basketImage.setOnClickListener {
@@ -178,41 +222,44 @@ class FruitShopFragment : Fragment() {
         binding.priceFruitText.text = getString(R.string.price_fruit_text)+" "+ String.format("%.2f",fruitShopViewModel.calculateFruit(quantity_number, this )) +"€"
     }
 
-    fun active_views(fruit_text: TextView, fruit_image: ImageView){
+    fun active_views(fruit_text: TextView, fruit_image: ImageView, fruit_button: ImageView){
         fruit_text.visibility = View.VISIBLE //mostramos la vista
         fruit_image.visibility = View.VISIBLE
+        fruit_button.visibility = View.VISIBLE
     }
 
-    fun desactive_views(fruit_text: TextView, fruit_image: ImageView){
+    fun desactive_views(fruit_text: TextView, fruit_image: ImageView, fruit_button: ImageView){
         fruit_text.visibility = View.GONE //mostramos la vista
         fruit_image.visibility = View.GONE
+        fruit_button.visibility = View.GONE
     }
 
     //funcion para mostrar las views cuando cambia la orientacion
     fun views(apple_text: TextView, pear_text: TextView, orange_text: TextView,
               plum_text: TextView, apple_image: ImageView, pear_image: ImageView,
-              orange_image: ImageView, plum_image: ImageView, delete_basket: Button
+              orange_image: ImageView, plum_image: ImageView, delete_basket: Button,
+              apple_button: ImageView, pear_button: ImageView, orange_button: ImageView, plum_button: ImageView
     ){
 
         if((fruitShopViewModel.apple.value ?: 0) > 0){
-            active_views(apple_text, apple_image)
+            active_views(apple_text, apple_image, apple_button)
         }else{
-            desactive_views(apple_text, apple_image)
+            desactive_views(apple_text, apple_image, apple_button)
         }
         if((fruitShopViewModel.pear.value ?: 0) > 0){
-            active_views(pear_text, pear_image)
+            active_views(pear_text, pear_image, pear_button)
         }else{
-            desactive_views(pear_text, pear_image)
+            desactive_views(pear_text, pear_image, pear_button)
         }
         if((fruitShopViewModel.orange.value ?: 0) > 0){
-            active_views(orange_text, orange_image)
+            active_views(orange_text, orange_image, orange_button)
         }else{
-            desactive_views(orange_text, orange_image)
+            desactive_views(orange_text, orange_image, orange_button)
         }
         if((fruitShopViewModel.plum.value ?: 0) > 0){
-            active_views(plum_text, plum_image)
+            active_views(plum_text, plum_image, plum_button)
         }else{
-            desactive_views(plum_text, plum_image)
+            desactive_views(plum_text, plum_image, plum_button)
         }
         if((fruitShopViewModel.totalFruit.value ?: 0.0) > 0.0){
             delete_basket.visibility = View.VISIBLE

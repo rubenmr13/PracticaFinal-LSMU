@@ -91,9 +91,6 @@
     <string name="password">Contraseña</string>
     <string name="welcome_user">Registro</string>
     <string name="register_user">Registro Usuario</string>
-    <string name="text_registered_user">El usuario ya ha sido registrado</string>
-    <string name="text_user_no_registered">El usuario no existe, registrate</string>
-    <string name="text_incorrect_password">Contraseña incorrecta</string>
 
     //CHAT
     <string name="chat_header" translatable="false">Chat de la tienda</string>
@@ -101,7 +98,6 @@
     <string name="send">Enviar</string>
     <string name="log_out">Cerrar Sesion</string>
     <string name="text_user_welcome">Bienvenido</string>
-    <string name="unregistered_user">Usuario no registrado, por favor inicie sesion </string>
 
 
     //INBOX
@@ -112,7 +108,29 @@
 
     //BASKET
     <string name="buy_all">Comprar</string>
+    <string name="remove_item">Eliminar</string>
 
+    //PURCHASE
+    <string name="purchase_title">CHECKOUT</string>
+    <string name="buy_process_title">1. MÉTODO DE PAGO</string>
+    <string name="card_number">número de tarjeta</string>
+    <string name="expire_date">fecha de caducidad</string>
+    <string name="cvc_number">CVC</string>
+    <string name="address_text">2. DIRECCIÓN</string>
+    <string name="city_text">ciudad</string>
+    <string name="street_text">calle</string>
+    <string name="number_text">número</string>
+    <string name="pay_text">PAGAR</string>
+    <string name="total_text">TOTAL: </string>
+    <string name="buy_text">COMPRAR</string>
+    <string name="back_text">CESTA</string>
+    <string name="wrong_field">Asegúrate de que todos los campos están rellenados correctamente</string>
+    <string name="country_text">país</string>
+
+    //PURCHASE COMPLETED
+    <string name="purchase_confirmed">COMPRA CONFIRMADA</string>
+    <string name="thank_you">GRACIAS POR COMPRAR EN TIENDAS PACO</string>
+    <string name="back_button">PÁGINA PRINCIPAL</string>
 
 
 </resources>

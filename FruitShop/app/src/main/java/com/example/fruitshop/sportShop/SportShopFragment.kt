@@ -75,7 +75,8 @@ class SportShopFragment : Fragment() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
                 views(binding.ballSoccerText, binding.ballBasketText, binding.ballTennisText, binding.ballBaseballText, binding.ballSoccerImage,
-                    binding.ballBasketImage, binding.ballTennisImage, binding.ballBaseballImage, binding.deleteBasket) //Muestra las views cuando cambia la orientacion
+                    binding.ballBasketImage, binding.ballTennisImage, binding.ballBaseballImage, binding.deleteBasket,
+                    binding.btnRemoveBallSoccer, binding.btnRemoveBallBasket, binding.btnRemoveBallBaseball, binding.btnRemoveBallTennis) //Muestra las views cuando cambia la orientacion
 
                 sportShopViewModel.saveSport(binding.spinnerSportShop.selectedItem.toString())
             }
@@ -103,7 +104,8 @@ class SportShopFragment : Fragment() {
             binding.seekBar.progress=0 //ponemos a 0 el seekBar
             sportShopViewModel.calculatePriceSport() //calculamos el precio y lo añadimos al bundle
             views(binding.ballSoccerText, binding.ballBasketText, binding.ballTennisText, binding.ballBaseballText, binding.ballSoccerImage,
-                binding.ballBasketImage, binding.ballTennisImage, binding.ballBaseballImage, binding.deleteBasket)
+                binding.ballBasketImage, binding.ballTennisImage, binding.ballBaseballImage, binding.deleteBasket,
+                binding.btnRemoveBallSoccer, binding.btnRemoveBallBasket, binding.btnRemoveBallBaseball, binding.btnRemoveBallTennis)
         }
 
         //si seleccionamos el boton de vaciar cesta
@@ -111,8 +113,48 @@ class SportShopFragment : Fragment() {
             sportShopViewModel.deleteItemSport()
             binding.seekBar.progress=0
             views(binding.ballSoccerText, binding.ballBasketText, binding.ballTennisText, binding.ballBaseballText, binding.ballSoccerImage,
-                binding.ballBasketImage, binding.ballTennisImage, binding.ballBaseballImage, binding.deleteBasket)
+                binding.ballBasketImage, binding.ballTennisImage, binding.ballBaseballImage, binding.deleteBasket,
+                binding.btnRemoveBallSoccer, binding.btnRemoveBallBasket, binding.btnRemoveBallBaseball, binding.btnRemoveBallTennis)
         }
+
+        binding.btnRemoveBallSoccer.setOnClickListener {
+            sportShopViewModel.deleteBallSoccer()
+            sportShopViewModel.calculatePriceSport()
+
+            views(binding.ballSoccerText, binding.ballBasketText, binding.ballTennisText, binding.ballBaseballText, binding.ballSoccerImage,
+                binding.ballBasketImage, binding.ballTennisImage, binding.ballBaseballImage, binding.deleteBasket,
+                binding.btnRemoveBallSoccer, binding.btnRemoveBallBasket, binding.btnRemoveBallBaseball, binding.btnRemoveBallTennis)
+        }
+
+        binding.btnRemoveBallBasket.setOnClickListener {
+            sportShopViewModel.deleteBallBasket()
+            sportShopViewModel.calculatePriceSport()
+
+            views(binding.ballSoccerText, binding.ballBasketText, binding.ballTennisText, binding.ballBaseballText, binding.ballSoccerImage,
+                binding.ballBasketImage, binding.ballTennisImage, binding.ballBaseballImage, binding.deleteBasket,
+                binding.btnRemoveBallSoccer, binding.btnRemoveBallBasket, binding.btnRemoveBallBaseball, binding.btnRemoveBallTennis)
+        }
+
+
+        binding.btnRemoveBallBaseball.setOnClickListener {
+            sportShopViewModel.deleteBallBaseball()
+            sportShopViewModel.calculatePriceSport()
+
+            views(binding.ballSoccerText, binding.ballBasketText, binding.ballTennisText, binding.ballBaseballText, binding.ballSoccerImage,
+                binding.ballBasketImage, binding.ballTennisImage, binding.ballBaseballImage, binding.deleteBasket,
+                binding.btnRemoveBallSoccer, binding.btnRemoveBallBasket, binding.btnRemoveBallBaseball, binding.btnRemoveBallTennis)
+        }
+
+        binding.btnRemoveBallTennis.setOnClickListener{
+            sportShopViewModel.deleteBallTennis()
+            sportShopViewModel.calculatePriceSport()
+
+            views(binding.ballSoccerText, binding.ballBasketText, binding.ballTennisText, binding.ballBaseballText, binding.ballSoccerImage,
+                binding.ballBasketImage, binding.ballTennisImage, binding.ballBaseballImage, binding.deleteBasket,
+                binding.btnRemoveBallSoccer, binding.btnRemoveBallBasket, binding.btnRemoveBallBaseball, binding.btnRemoveBallTennis)
+        }
+
+
 
         binding.basketImage.setOnClickListener {
             findNavController().navigate(R.id.action_sportShopFragment_to_basketFragment)
@@ -179,40 +221,43 @@ class SportShopFragment : Fragment() {
         binding.priceSportText.text = getString(R.string.price_sport_text)+" "+ String.format("%.2f",sportShopViewModel.calculateSport(quantity_number, this )) +"€"
     }
 
-    fun active_views(sport_text: TextView, sport_image: ImageView){
+    fun active_views(sport_text: TextView, sport_image: ImageView, sport_button: ImageView){
         sport_text.visibility = View.VISIBLE //mostramos la vista
         sport_image.visibility = View.VISIBLE
+        sport_button.visibility = View.VISIBLE
     }
 
-    fun desactive_views(sport_text: TextView, sport_image: ImageView){
+    fun desactive_views(sport_text: TextView, sport_image: ImageView, sport_button: ImageView){
         sport_text.visibility = View.GONE //mostramos la vista
         sport_image.visibility = View.GONE
+        sport_button.visibility = View.GONE
     }
 
     //funcion para mostrar las views cuando cambia la orientacion
     fun views(ballSoccer_text: TextView, ballBasket_text: TextView, ballTennis_text: TextView,
               ballBaseball_text: TextView, ballSoccer_image: ImageView, ballBasket_image: ImageView,
-              ballTennis_image: ImageView, ballBaseball_image: ImageView, delete_basket: Button
+              ballTennis_image: ImageView, ballBaseball_image: ImageView, delete_basket: Button,
+              soccer_button: ImageView, ball_basket_button: ImageView, baseball_button: ImageView, tennis_button: ImageView
     ){
         if((sportShopViewModel.ballSoccer.value ?: 0) > 0){
-            active_views(ballSoccer_text, ballSoccer_image)
+            active_views(ballSoccer_text, ballSoccer_image, soccer_button)
         }else{
-            desactive_views(ballSoccer_text, ballSoccer_image)
+            desactive_views(ballSoccer_text, ballSoccer_image, soccer_button)
         }
         if((sportShopViewModel.ballBasket.value ?: 0) > 0){
-            active_views(ballBasket_text, ballBasket_image)
+            active_views(ballBasket_text, ballBasket_image, ball_basket_button)
         }else{
-            desactive_views(ballBasket_text, ballBasket_image)
+            desactive_views(ballBasket_text, ballBasket_image, ball_basket_button)
         }
         if((sportShopViewModel.ballTennis.value ?: 0) > 0){
-            active_views(ballTennis_text, ballTennis_image)
+            active_views(ballTennis_text, ballTennis_image,  tennis_button)
         }else{
-            desactive_views(ballTennis_text, ballTennis_image)
+            desactive_views(ballTennis_text, ballTennis_image,  tennis_button)
         }
         if((sportShopViewModel.ballBaseball.value ?: 0) > 0){
-            active_views(ballBaseball_text, ballBaseball_image)
+            active_views(ballBaseball_text, ballBaseball_image, baseball_button)
         }else{
-            desactive_views(ballBaseball_text, ballBaseball_image)
+            desactive_views(ballBaseball_text, ballBaseball_image, baseball_button)
         }
         if((sportShopViewModel.totalSport.value ?: 0.0) > 0.0){
             delete_basket.visibility = View.VISIBLE

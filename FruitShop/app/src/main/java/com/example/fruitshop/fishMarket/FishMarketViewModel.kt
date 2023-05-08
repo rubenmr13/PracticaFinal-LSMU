@@ -103,5 +103,29 @@ class FishMarketViewModel: ViewModel() {
         return totalFish
     }
 
+    fun deleteSalmon() {
+        val salmonCount = _salmon.value?: 0
+        _totalFish.value = _totalFish.value?.minus(salmonCount)
+        _salmon.value = 0
+    }
+
+    fun deleteGiltHeadBream() {
+        val breamCount = _gilt_head_bream.value?: 0
+        _totalFish.value = _totalFish.value?.minus(breamCount)
+        _gilt_head_bream.value = 0
+    }
+
+    fun deleteSeaBass() {
+        val seaBassCount = _sea_bass.value?: 0
+        _totalFish.value = _totalFish.value?.minus(seaBassCount)
+        _sea_bass.value = 0
+    }
+
+    fun deleteRedMullet() {
+        val redMulletCount = _red_mullet.value?: 0
+        _totalFish.value = _totalFish.value?.minus(redMulletCount)
+        _red_mullet.value = 0
+    }
+
 
 }

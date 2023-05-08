@@ -176,6 +176,16 @@
                         android:layout_marginTop="10dp"
                         android:text="@string/apple_text"
                         android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/btnRemoveApple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:clickable="true"
+                        android:src="@drawable/baseline_delete_24" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -200,6 +210,15 @@
                         android:layout_marginTop="10dp"
                         android:text="@string/pear_text"
                         android:textSize="16sp"/>
+
+                    <ImageView
+                        android:id="@+id/btnRemovePear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:clickable="true"
+                        android:src="@drawable/baseline_delete_24" />
 
                 </LinearLayout>
 
@@ -227,6 +246,15 @@
                         app:layout_constraintStart_toEndOf="@+id/orange_image"
                         app:layout_constraintTop_toBottomOf="@+id/pear_text" />
 
+                    <ImageView
+                        android:id="@+id/btnRemoveOrange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:clickable="true"
+                        android:src="@drawable/baseline_delete_24" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -253,6 +281,16 @@
                         android:textSize="16sp"
                         app:layout_constraintStart_toEndOf="@+id/plum_image"
                         app:layout_constraintTop_toBottomOf="@+id/orange_text" />
+
+                    <ImageView
+                        android:id="@+id/btnRemovePlum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="14dp"
+                        android:clickable="true"
+                        android:src="@drawable/baseline_delete_24" />
+
                 </LinearLayout>
 
                 <TextView
@@ -296,21 +334,5 @@
             </LinearLayout>
 
         </LinearLayout>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/creator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:text="@string/creator"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </layout>

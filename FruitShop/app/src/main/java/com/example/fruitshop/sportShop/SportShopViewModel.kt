@@ -101,4 +101,28 @@ class SportShopViewModel: ViewModel() {
         val totalSport = _totalSport.value?:0.0
         return totalSport
     }
+
+    fun deleteBallSoccer() {
+        val soccerCount = _ballSoccer.value?: 0
+        _totalSport.value = _totalSport.value?.minus(soccerCount)
+        _ballSoccer.value = 0
+    }
+
+    fun deleteBallBasket() {
+        val ballBasketCount = _ballBasket.value?: 0
+        _totalSport.value = _totalSport.value?.minus(ballBasketCount)
+        _ballBasket.value = 0
+    }
+
+    fun deleteBallBaseball() {
+        val ballBaseballCount = _ballBaseball.value?: 0
+        _totalSport.value = _totalSport.value?.minus(ballBaseballCount)
+        _ballBaseball.value = 0
+    }
+
+    fun deleteBallTennis() {
+        val ballTennisCount = _ballTennis.value?: 0
+        _totalSport.value = _totalSport.value?.minus(ballTennisCount)
+        _ballTennis.value = 0
+    }
 }

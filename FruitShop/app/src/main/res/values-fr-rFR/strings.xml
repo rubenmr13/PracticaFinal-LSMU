@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FruitShop</string>
+
+    //FRUIT SHOP
+    <string name="fruit_shop">Fruits Paco</string>
+    <string name="selected_fruit">Sélectionner le fruit</string>
+    <string name="apple">Pomme</string>
+    <string name="pear">Poire</string>
+    <string name="orange">Orange</string>
+    <string name="plum">Prune</string>
+    <string name="text_quantity_selected">Numéro sélectionné:</string>
+    <string name="price_fruit_text">Prix:</string>
+    <string name="add">Ajouter</string>
+    <string name="delete_basket">Vider Panier</string>
+    <string name="apple_text">Pièces de pomme</string>
+    <string name="pear_text">Pièces de poire</string>
+    <string name="orange_text">Pièces de orange</string>
+    <string name="plum_text">Pièces de prune</string>
+    <string name="basket">Panier</string>
+    <string name="total">Total</string>
+
+    //MENU SHOP
+    <string name="menu_shop">Magasins Paco</string>
+    <string name="fish_market_text">Poissonnerie</string>
+    <string name="fruit_shop_text">Fruits</string>
+    <string name="butcher_shop_text">Boucherie</string>
+    <string name="sport_shop_text">Sports</string>
+
+
+
+    //FISH MARKET
+    <string name="fish_market">Poissonnerie Paco</string>
+    <string name="selected_fish">Sélectionner le Poisson</string>
+    <string name="salmon">Saumon</string>
+    <string name="gilt_head_bream">Daurade</string>
+    <string name="sea_bass">Loup de Mer</string>
+    <string name="red_mullet">Rouget</string>
+    <string name="price_fish_text">Prix: </string>
+    <string name="salmon_text">Pièces de Saumon</string>
+    <string name="gilt_head_bream_text">Pièces de Daurade</string>
+    <string name="sea_bass_text">Pièces de Loup de Mer</string>
+    <string name="red_mullet_text">Pièces de Rouget</string>
+
+    // BUTCHER SHOP
+    <string name="butcher_shop">Boucherie Paco</string>
+    <string name="selected_meat">Sélectionner le Viande</string>
+    <string name="cow">Vache</string>
+    <string name="chicken">Poulet</string>
+    <string name="pig">Porc</string>
+    <string name="mince">Viande hachée</string>
+
+    <string name="price_meat_text">Prix: </string>
+    <string name="cow_text">Pièces de vache</string>
+    <string name="chicken_text">Pièces de poulet</string>
+    <string name="pig_text">Pièces de porc</string>
+    <string name="mince_text">Pièces de viande hachée</string>
+
+    //SPORT SHOP
+    <string name="sport_shop">Sports Paco</string>
+    <string name="selected_sport">Sélectionner le article de sport</string>
+    <string name="ball_soccer">Ballon de football</string>
+    <string name="ball_basket">Balle de basket-ball</string>
+    <string name="ball_tennis">Balle de tennis</string>
+    <string name="ball_baseball">Balle de baseball</string>
+
+    <string name="price_sport_text">Prix: </string>
+    <string name="ball_soccer_text">Numéro ballon de football</string>
+    <string name="ball_basket_text">Numéro balle de basket-ball</string>
+    <string name="ball_tennis_text">Numéro balle de tennis</string>
+    <string name="ball_baseball_text">Numéro balle de baseball</string>
+
+
+    //LABEL
+    <string name="label_fruit_shop">Fruits</string>
+    <string name="label_fish_market">Poissonnerie</string>
+    <string name="label_butcher_shop">Boucherie</string>
+    <string name="label_sport_shop">Sports</string>
+    <string name="label_menu">Menu</string>
+    <string name="label_basket">Panier</string>
+
+    //DRAWER
+    <string name="user_text">Usuario</string>
+    <string name="inbox_text">Correo</string>
+    <string name="basket_text">Cesta Total</string>
+
+    //USER
+    <string name="user">Identifiant</string>
+    <string name="sing_up">Inscrire</string>
+    <string name="sign_in">Commencer Session</string>
+    <string name="password">Mot de passe</string>
+    <string name="welcome_user">Inscription</string>
+    <string name="register_user">Registre des utilisateurs</string>
+
+    //CHAT
+    <string name="chat_header" translatable="false">Chat de la magasin</string>
+    <string name="send_text">Écrire ici</string>
+    <string name="send">Envoyer</string>
+    <string name="log_out">Fermer la session</string>
+    <string name="text_user_welcome">Bienvenu</string>
+
+
+    //INBOX
+    <string name="inbox_header">Courrier de le magasin</string>
+    <string name="your_message">Tes messages:</string>
+    <string name="delete_message">Supprimer mensajes</string>
+
+
+    //BASKET
+    <string name="buy_all">Acheter</string>
+    <string name="remove_item">Éliminer</string>
+
+    //PURCHASE
+    <string name="purchase_title">CHECKOUT</string>
+    <string name="buy_process_title">1. PROCÉDÉ DE PAIEMENT</string>
+    <string name="card_number">numéro de carte</string>
+    <string name="expire_date">date d\'expiration</string>
+    <string name="cvc_number">CVC</string>
+    <string name="address_text">2. ADRESSE</string>
+    <string name="city_text">ville</string>
+    <string name="street_text">rue</string>
+    <string name="number_text">numéro</string>
+    <string name="pay_text">PAYER</string>
+    <string name="total_text">TOTAL: </string>
+    <string name="buy_text">ACHETER</string>
+    <string name="back_text">PANIER</string>
+    <string name="wrong_field">Assurez-vous que les champs sont corrects</string>
+    <string name="country_text">pays</string>
+
+
+    //PURCHASE COMPLETED
+    <string name="purchase_confirmed">ACHAT CONFIRMÉ</string>
+    <string name="thank_you">MERCI D\'AVOIR FAIT VOS ACHATS DANS LES MAGASINS PACO</string>
+    <string name="back_button">PAGE PRINCIPAL</string>
+
+
+</resources>

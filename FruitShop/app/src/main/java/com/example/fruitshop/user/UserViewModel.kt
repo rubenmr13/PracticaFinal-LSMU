@@ -1,62 +1,20 @@
 package com.example.fruitshop.user
 
-import androidx.lifecycle.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 
-class UserViewModel(val dao: RoomDao): ViewModel() {
+class UserViewModel: ViewModel() {
 
+    private val _user = MutableLiveData<String>()
+    val user: LiveData<String>
+        get() = _user
 
-    var name = ""
-    var password = ""
-
-
-    private val user = dao.getAll()
-
-    fun addUSer() {
-        viewModelScope.launch {
-            val user = RoomEntity()
-            user.roomName = name
-            user.roomPassword = password
-            dao.insert(user)
-        }
+    fun addUser(name: String){
+        _user.value = name
+    }
+    fun getUser(): String{
+        return _user.value.toString()
     }
 
-    fun signUpUser(name: String): Boolean {
-        var isUserInDatabase = false
-        runBlocking {
-            withContext(Dispatchers.IO) {
-                val names = dao.getAllNames()
-                for (i in names.indices) {
-                    if (names[i] == name) {
-                        isUserInDatabase = true
-                        break
-                    }
-                }
-            }
-        }
-        return isUserInDatabase
-    }
-
-    fun signInUser(
-        name: String,
-        password: String
-    ): Boolean { // puedes usar una corrutina para realizar la consulta en un hilo separado, o usar el método postValue() de LiveData para enviar el resultado a la UI desde un hilo separado.
-        var isUserInDatabase = false
-        runBlocking {
-            withContext(Dispatchers.IO) {
-                val names = dao.getAllNames()
-                val passwords = dao.getAllPasswords()
-                for (i in names.indices) {
-                    if (names[i] == name && passwords[i] == password) {
-                        isUserInDatabase = true
-                        break
-                    }
-                }
-            }
-        }
-        return isUserInDatabase
-    }
 }
