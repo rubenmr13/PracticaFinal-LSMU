@@ -188,6 +188,7 @@ class FishMarketFragment : Fragment() {
         binding.textQuantitySelected.visibility = View.GONE
         binding.priceFishText.visibility = View.GONE
         binding.deleteBasket.visibility = View.GONE
+        binding.priceUnitFishText.visibility = View.GONE
 
         if((fishMarketViewModel.totalFish.value ?: 0.0) > 0.0){
             binding.deleteBasket.visibility = View.VISIBLE
@@ -202,6 +203,7 @@ class FishMarketFragment : Fragment() {
         binding.textQuantitySelected.visibility = View.VISIBLE
         binding.priceFishText.visibility = View.VISIBLE
         binding.seekBar.progress = 0 //ponemos a 0 el seekBar
+        binding.priceUnitFishText.visibility = View.VISIBLE
 
         if((fishMarketViewModel.totalFish.value ?: 0.0) > 0.0){
             binding.deleteBasket.visibility = View.VISIBLE
@@ -211,6 +213,10 @@ class FishMarketFragment : Fragment() {
 
         binding.textQuantitySelected.text = getString(R.string.text_quantity_selected)+ " "+quantity_number+"/10"
         binding.priceFishText.text = getString(R.string.price_fish_text)+" "+ String.format("%.2f",fishMarketViewModel.calculateFish(quantity_number, this )) +"€"
+
+        val price_unit = fishMarketViewModel.priceUnitFish(this)
+        binding.priceUnitFishText.text = getString(R.string.price_unit_fish_text)+" "+ price_unit.toString() + "€"
+
     }
 
     fun active_views(fish_text: TextView, fish_image: ImageView, fish_button: ImageView){

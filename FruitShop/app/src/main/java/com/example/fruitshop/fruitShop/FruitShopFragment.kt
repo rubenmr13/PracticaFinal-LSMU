@@ -197,6 +197,7 @@ class FruitShopFragment : Fragment() {
         binding.textQuantitySelected.visibility = View.GONE
         binding.priceFruitText.visibility = View.GONE
         binding.deleteBasket.visibility = View.GONE
+        binding.priceUnitFruitText.visibility = View.GONE
 
         if((fruitShopViewModel.totalFruit.value ?: 0.0) > 0.0){
             binding.deleteBasket.visibility = View.VISIBLE
@@ -211,6 +212,7 @@ class FruitShopFragment : Fragment() {
         binding.textQuantitySelected.visibility = View.VISIBLE
         binding.priceFruitText.visibility = View.VISIBLE
         binding.seekBar.progress = 0 //ponemos a 0 el seekBar
+        binding.priceUnitFruitText.visibility = View.VISIBLE
 
         if((fruitShopViewModel.totalFruit.value ?: 0.0) > 0.0){
             binding.deleteBasket.visibility = View.VISIBLE
@@ -220,6 +222,8 @@ class FruitShopFragment : Fragment() {
 
         binding.textQuantitySelected.text = getString(R.string.text_quantity_selected)+ " "+quantity_number+"/100"
         binding.priceFruitText.text = getString(R.string.price_fruit_text)+" "+ String.format("%.2f",fruitShopViewModel.calculateFruit(quantity_number, this )) +"€"
+        val price_unit = fruitShopViewModel.priceUnitFruit(this@FruitShopFragment)
+        binding.priceUnitFruitText.text = getString(R.string.price_unit_fruit_text)+" "+ price_unit.toString() + "€"
     }
 
     fun active_views(fruit_text: TextView, fruit_image: ImageView, fruit_button: ImageView){

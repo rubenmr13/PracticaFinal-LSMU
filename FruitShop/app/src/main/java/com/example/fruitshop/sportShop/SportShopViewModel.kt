@@ -4,15 +4,16 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.fruitshop.R
+import com.example.fruitshop.butcher.ButcherShopFragment
 import com.example.fruitshop.sportShop.SportShopFragment
 
 class SportShopViewModel: ViewModel() {
 
 
-    val BALL_SOCCER = 12.0
-    val BALL_BASKET = 8.0
-    val BALL_TENNIS = 2.5
-    val BALL_BASEBALL = 4.0
+    val BALL_SOCCER = 12.00
+    val BALL_BASKET = 8.00
+    val BALL_TENNIS = 2.50
+    val BALL_BASEBALL = 4.00
 
 
     private val _sport = MutableLiveData<String>()
@@ -39,6 +40,16 @@ class SportShopViewModel: ViewModel() {
     val ballBaseball: LiveData<Int>
         get() = _ballBaseball
 
+
+    fun priceUnitMeat(context : SportShopFragment): Double{
+        return when (_sport.value){
+            context.getString(R.string.ball_soccer)-> BALL_SOCCER
+            context.getString(R.string.ball_basket) -> BALL_BASKET
+            context.getString(R.string.ball_tennis) -> BALL_TENNIS
+            context.getString(R.string.ball_baseball) -> BALL_BASEBALL
+            else -> 0.00
+        }
+    }
 
     fun addSport(quantity_number: Int, context: SportShopFragment){
         val number: Int

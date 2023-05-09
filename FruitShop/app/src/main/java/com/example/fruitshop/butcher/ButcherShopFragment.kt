@@ -79,7 +79,6 @@ class ButcherShopFragment : Fragment() {
                 views(binding.cowText, binding.chickenText, binding.pigText, binding.minceText, binding.cowImage,
                     binding.chickenImage, binding.pigImage, binding.minceImage, binding.deleteBasket,
                     binding.btnRemoveCow, binding.btnRemoveChicken, binding.btnRemovePig, binding.btnRemoveMince) //Muestra las views cuando cambia la orientacion
-
                 butcherShopViewModel.saveMeat(binding.spinnerButcherShop.selectedItem.toString())
                 //usamos el observer de fruit para actualizar las vistas
             }
@@ -196,6 +195,7 @@ class ButcherShopFragment : Fragment() {
         binding.textQuantitySelected.visibility = View.GONE
         binding.priceMeatText.visibility = View.GONE
         binding.deleteBasket.visibility = View.GONE
+        binding.priceUnitMeatText.visibility = View.GONE
 
         if((butcherShopViewModel.totalMeat.value ?: 0.0) > 0.0){
             binding.deleteBasket.visibility = View.VISIBLE
@@ -211,6 +211,7 @@ class ButcherShopFragment : Fragment() {
         binding.textQuantitySelected.visibility = View.VISIBLE
         binding.priceMeatText.visibility = View.VISIBLE
         binding.seekBar.progress = 0 //ponemos a 0 el seekBar
+        binding.priceUnitMeatText.visibility = View.VISIBLE
 
         if((butcherShopViewModel.totalMeat.value ?: 0.0) > 0.0){
             binding.deleteBasket.visibility = View.VISIBLE
@@ -220,6 +221,9 @@ class ButcherShopFragment : Fragment() {
 
         binding.textQuantitySelected.text = getString(R.string.text_quantity_selected)+ " "+quantity_number+"/10"
         binding.priceMeatText.text = getString(R.string.price_meat_text)+" "+ String.format("%.2f",butcherShopViewModel.calculateMeat(quantity_number, this )) +"€"
+        val price_unit = butcherShopViewModel.priceUnitMeat(this@ButcherShopFragment)
+        binding.priceUnitMeatText.text = getString(R.string.price_unit_meat_text)+" "+ price_unit.toString() + "€"
+
     }
 
     fun active_views(meat_text: TextView, meat_image: ImageView, meat_button: ImageView){

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FruitShop</string>
+    <string name="app_name">Tiendas Paco</string>
 
     //FRUIT SHOP
     <string name="fruit_shop">Fruterias Paco</string>
@@ -19,6 +19,8 @@
     <string name="plum_text">Piezas de ciruelas</string>
     <string name="basket">Cesta</string>
     <string name="total">Total</string>
+    <string name="price_unit_fruit_text">Precio/unidad:</string>
+
 
     //MENU SHOP
     <string name="menu_shop">Tiendas Paco</string>
@@ -41,6 +43,7 @@
     <string name="gilt_head_bream_text">Piezas de dorada</string>
     <string name="sea_bass_text">Piezas de lubina</string>
     <string name="red_mullet_text">Piezas de salmonete</string>
+    <string name="price_unit_fish_text">Precio/unidad:</string>
 
     // BUTCHER SHOP
     <string name="butcher_shop">Carnicerias Paco</string>
@@ -55,6 +58,8 @@
     <string name="chicken_text">Piezas de pollo</string>
     <string name="pig_text">Piezas de cerdo</string>
     <string name="mince_text">Piezas de carne picada</string>
+    <string name="price_unit_meat_text">Precio/unidad:</string>
+
 
     //SPORT SHOP
     <string name="sport_shop">Deportes Paco</string>
@@ -69,6 +74,8 @@
     <string name="ball_basket_text">Numero pelotas de baloncesto</string>
     <string name="ball_tennis_text">Numero pelotas de tenis</string>
     <string name="ball_baseball_text">Numero pelotas de baisbol</string>
+    <string name="price_unit_sport_text">Precio/unidad:</string>
+
 
 
     //LABEL
@@ -91,6 +98,9 @@
     <string name="password">Contraseña</string>
     <string name="welcome_user">Registro</string>
     <string name="register_user">Registro Usuario</string>
+    <string name="text_registered_user">El usuario ya ha sido registrado</string>
+    <string name="text_user_no_registered">El usuario no existe, registrate</string>
+    <string name="text_incorrect_password">Contraseña incorrecta</string>
 
     //CHAT
     <string name="chat_header" translatable="false">Chat de la tienda</string>
@@ -98,6 +108,7 @@
     <string name="send">Enviar</string>
     <string name="log_out">Cerrar Sesion</string>
     <string name="text_user_welcome">Bienvenido</string>
+    <string name="unregistered_user">Usuario no registrado, por favor inicie sesion </string>
 
 
     //INBOX
@@ -111,7 +122,8 @@
     <string name="remove_item">Eliminar</string>
 
     //PURCHASE
-    <string name="purchase_title">CHECKOUT</string>
+    <string name="purchase_title">VERIFICACIÓN</string>
+    <string name="purchase_title_text">Verificación</string>
     <string name="buy_process_title">1. MÉTODO DE PAGO</string>
     <string name="card_number">número de tarjeta</string>
     <string name="expire_date">fecha de caducidad</string>
@@ -129,8 +141,12 @@
 
     //PURCHASE COMPLETED
     <string name="purchase_confirmed">COMPRA CONFIRMADA</string>
+    <string name="purchase_confirmed_text">Compra Confirmada</string>
     <string name="thank_you">GRACIAS POR COMPRAR EN TIENDAS PACO</string>
     <string name="back_button">PÁGINA PRINCIPAL</string>
+
+
+
 
 
 </resources>

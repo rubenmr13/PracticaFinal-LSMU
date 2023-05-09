@@ -94,6 +94,5 @@
             android:layout_gravity="center"
             android:backgroundTint="@color/red_cc0000"
             android:text="@string/log_out"/>
-
     </LinearLayout>
 </layout>

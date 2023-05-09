@@ -4,13 +4,14 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.fruitshop.R
+import com.example.fruitshop.butcher.ButcherShopFragment
 import com.example.fruitshop.fruitShop.FruitShopFragment
 
 class FruitShopViewModel: ViewModel() {
 
     //// FRUIT SHOP
-    val APPLE_PRICE = 0.5
-    val PEAR_PRICE = 0.4
+    val APPLE_PRICE = 0.50
+    val PEAR_PRICE = 0.40
     val ORANGE_PRICE = 0.25
     val PLUM_PRICE = 0.09
 
@@ -38,6 +39,17 @@ class FruitShopViewModel: ViewModel() {
     private val _plum = MutableLiveData<Int>()
     val plum: LiveData<Int>
         get() = _plum
+
+    fun priceUnitFruit(context : FruitShopFragment): Double{
+        return when (_fruit.value){
+            context.getString(R.string.apple)-> APPLE_PRICE
+            context.getString(R.string.pear) -> PEAR_PRICE
+            context.getString(R.string.orange) -> ORANGE_PRICE
+            context.getString(R.string.plum) -> PLUM_PRICE
+            else -> 0.00
+        }
+    }
+
 
 
     fun deleteItemFruit(){

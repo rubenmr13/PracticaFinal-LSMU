@@ -196,6 +196,7 @@ class SportShopFragment : Fragment() {
         binding.textQuantitySelected.visibility = View.GONE
         binding.priceSportText.visibility = View.GONE
         binding.deleteBasket.visibility = View.GONE
+        binding.priceUnitSportText.visibility = View.GONE
 
         if((sportShopViewModel.totalSport.value ?: 0.0) > 0.0){
             binding.deleteBasket.visibility = View.VISIBLE
@@ -210,6 +211,7 @@ class SportShopFragment : Fragment() {
         binding.textQuantitySelected.visibility = View.VISIBLE
         binding.priceSportText.visibility = View.VISIBLE
         binding.seekBar.progress = 0 //ponemos a 0 el seekBar
+        binding.priceUnitSportText.visibility = View.VISIBLE
 
         if((sportShopViewModel.totalSport.value ?: 0.0) > 0.0){
             binding.deleteBasket.visibility = View.VISIBLE
@@ -219,6 +221,8 @@ class SportShopFragment : Fragment() {
 
         binding.textQuantitySelected.text = getString(R.string.text_quantity_selected)+ " "+quantity_number+"/50"
         binding.priceSportText.text = getString(R.string.price_sport_text)+" "+ String.format("%.2f",sportShopViewModel.calculateSport(quantity_number, this )) +"€"
+        val price_unit = sportShopViewModel.priceUnitMeat(this@SportShopFragment)
+        binding.priceUnitSportText.text = getString(R.string.price_unit_sport_text)+" "+ price_unit.toString() + "€"
     }
 
     fun active_views(sport_text: TextView, sport_image: ImageView, sport_button: ImageView){

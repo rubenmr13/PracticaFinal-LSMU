@@ -4,15 +4,16 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.fruitshop.R
+import com.example.fruitshop.butcher.ButcherShopFragment
 import com.example.fruitshop.fishMarket.FishMarketFragment
 
 class FishMarketViewModel: ViewModel() {
 
 
-    val SALMON_PRICE = 7.0
-    val GILT_HEAD_BREAM_PRICE = 6.0
-    val SEA_BASS_PRICE = 5.0
-    val RED_MULLET_PRICE = 2.0
+    val SALMON_PRICE = 7.00
+    val GILT_HEAD_BREAM_PRICE = 6.00
+    val SEA_BASS_PRICE = 5.00
+    val RED_MULLET_PRICE = 2.00
 
 
     private val _fish = MutableLiveData<String>()
@@ -40,6 +41,15 @@ class FishMarketViewModel: ViewModel() {
         get() = _red_mullet
 
 
+    fun priceUnitFish(context : FishMarketFragment): Double{
+        return when (_fish.value){
+            context.getString(R.string.salmon)-> SALMON_PRICE
+            context.getString(R.string.gilt_head_bream) -> GILT_HEAD_BREAM_PRICE
+            context.getString(R.string.sea_bass) -> SEA_BASS_PRICE
+            context.getString(R.string.red_mullet) -> RED_MULLET_PRICE
+            else -> 0.00
+        }
+    }
 
     fun addFish(quantity_number: Int, context: FishMarketFragment){
         val number: Int

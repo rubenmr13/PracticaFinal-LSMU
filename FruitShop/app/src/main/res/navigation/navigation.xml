@@ -88,7 +88,7 @@
     <fragment
         android:id="@+id/purchaseProcessFragment"
         android:name="com.example.fruitshop.basket.PurchaseProcessFragment"
-        android:label="Checkout"
+        android:label="@string/purchase_title_text"
         tools:layout="@layout/fragment_purchase_process" >
         <action
             android:id="@+id/action_purchaseProcessFragment_to_purchaseCompletedFragment"
@@ -100,7 +100,7 @@
     <fragment
         android:id="@+id/purchaseCompletedFragment"
         android:name="com.example.fruitshop.basket.PurchaseCompletedFragment"
-        android:label="@string/purchase_confirmed"
+        android:label="@string/purchase_confirmed_text"
         tools:layout="@layout/fragment_purchase_completed" >
         <action
             android:id="@+id/action_purchaseCompletedFragment_to_menuFragment"

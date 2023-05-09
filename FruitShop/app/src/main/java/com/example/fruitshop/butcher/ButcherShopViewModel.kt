@@ -7,10 +7,10 @@ import com.example.fruitshop.R
 import com.example.fruitshop.butcher.ButcherShopFragment
 
 class ButcherShopViewModel: ViewModel() {
-    val COW_PRICE = 3.0
-    val CHICKEN_PRICE = 4.5
-    val PIG_PRICE = 1.0
-    val MINCE_PRICE = 4.0
+    val COW_PRICE = 3.00
+    val CHICKEN_PRICE = 4.50
+    val PIG_PRICE = 1.00
+    val MINCE_PRICE = 4.00
 
 
     private val _meat = MutableLiveData<String>()
@@ -37,6 +37,16 @@ class ButcherShopViewModel: ViewModel() {
     val mince: LiveData<Int>
         get() = _mince
 
+
+    fun priceUnitMeat(context : ButcherShopFragment): Double{
+        return when (_meat.value){
+            context.getString(R.string.cow)-> COW_PRICE
+            context.getString(R.string.chicken) -> CHICKEN_PRICE
+            context.getString(R.string.pig) -> PIG_PRICE
+            context.getString(R.string.mince) -> MINCE_PRICE
+            else -> 0.00
+        }
+    }
 
     fun addMeat(quantity_number: Int, context: ButcherShopFragment){
         val number: Int
