@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/menuFragment">
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.fruitshop.MenuFragment"
+        android:label="@string/label_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_fruitShopFragment2"
+            app:destination="@id/fruitShopFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_menuFragment_to_fishMarketFragment"
+            app:destination="@id/fishMarketFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_butcherShopFragment"
+            app:destination="@id/butcherShopFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_sportShopFragment"
+            app:destination="@id/sportShopFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fruitShopFragment"
+        android:name="com.example.fruitshop.fruitShop.FruitShopFragment"
+        android:label="@string/label_fruit_shop">
+        <action
+            android:id="@+id/action_fruitShopFragment_to_basketFragment"
+            app:destination="@id/basketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="com.example.fruitshop.basket.BasketFragment"
+        android:label="@string/basket_text" >
+        <action
+            android:id="@+id/action_basketFragment_to_purchaseProcessFragment"
+            app:destination="@id/purchaseProcessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fishMarketFragment"
+        android:name="com.example.fruitshop.fishMarket.FishMarketFragment"
+        android:label="@string/label_fish_market"
+        tools:layout="@layout/fragment_fish_market" >
+        <action
+            android:id="@+id/action_fishMarketFragment_to_basketFragment"
+            app:destination="@id/basketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/butcherShopFragment"
+        android:name="com.example.fruitshop.butcher.ButcherShopFragment"
+        android:label="@string/label_butcher_shop"
+        tools:layout="@layout/fragment_butcher_shop" >
+        <action
+            android:id="@+id/action_butcherShopFragment_to_basketFragment"
+            app:destination="@id/basketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sportShopFragment"
+        android:name="com.example.fruitshop.sportShop.SportShopFragment"
+        android:label="@string/label_sport_shop"
+        tools:layout="@layout/fragment_sport_shop" >
+        <action
+            android:id="@+id/action_sportShopFragment_to_basketFragment"
+            app:destination="@id/basketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.fruitshop.user.UserFragment"
+        android:label="@string/register_user"
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_userFragment_self"
+            app:destination="@id/userFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.fruitshop.ChatFragment"
+        android:label="@string/chat_text"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/inboxFragment"
+        android:name="com.example.fruitshop.InboxFragment"
+        android:label="@string/inbox_text"
+        tools:layout="@layout/fragment_inbox" />
+    <fragment
+        android:id="@+id/purchaseProcessFragment"
+        android:name="com.example.fruitshop.basket.PurchaseProcessFragment"
+        android:label="@string/purchase_title_text"
+        tools:layout="@layout/fragment_purchase_process" >
+        <action
+            android:id="@+id/action_purchaseProcessFragment_to_purchaseCompletedFragment"
+            app:destination="@id/purchaseCompletedFragment" />
+        <action
+            android:id="@+id/action_purchaseProcessFragment_to_basketFragment"
+            app:destination="@id/basketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/purchaseCompletedFragment"
+        android:name="com.example.fruitshop.basket.PurchaseCompletedFragment"
+        android:label="@string/purchase_confirmed_text"
+        tools:layout="@layout/fragment_purchase_completed" >
+        <action
+            android:id="@+id/action_purchaseCompletedFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+</navigation>

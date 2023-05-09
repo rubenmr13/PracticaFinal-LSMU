@@ -1,0 +1,187 @@
+<resources>
+    <string name="app_name">Shops Paco</string>
+
+
+    //FRUIT SHOP
+    <string name="fruit_shop">Fruit Shops Paco</string>
+    <string name="selected_fruit">Select the fruit</string>
+    <string name="apple">Apple</string>
+    <string name="pear">Pear</string>
+    <string name="orange">Orange</string>
+    <string name="plum">Plum</string>
+    <string-array name="select_fruit">
+        <item>@string/selected_fruit</item>
+        <item>@string/apple</item>
+        <item>@string/pear</item>
+        <item>@string/orange</item>
+        <item>@string/plum</item>
+    </string-array>
+
+    <string name="text_quantity_selected">Number select:</string>
+    <string name="price_fruit_text">Price: </string>
+    <string name="add">Add</string>
+    <string name="delete_basket">Delete Basket</string>
+
+    <string name="apple_text">Apple pieces</string>
+    <string name="pear_text">Pear pieces</string>
+    <string name="orange_text">Orange pieces</string>
+    <string name="plum_text">Plum pieces</string>
+
+    <string name="basket">Basket</string>
+    <string name="total">Total</string>
+
+    //MENU SHOP
+    <string name="menu_shop">Shops Paco</string>
+    <string name="fish_market_text">Fish Market</string>
+    <string name="fruit_shop_text">Fruit Shop</string>
+    <string name="butcher_shop_text">Butcher Shop</string>
+    <string name="sport_shop_text">Sports</string>
+
+
+    //FISH MARKET
+    <string name="fish_market">Fish Market Paco</string>
+    <string name="selected_fish">Select the fish</string>
+    <string name="salmon">Salmon</string>
+    <string name="gilt_head_bream">Gilt-head bream</string>
+    <string name="sea_bass">Sea bass</string>
+    <string name="red_mullet">Red mullet</string>
+    <string-array name="select_fish">
+        <item>@string/selected_fish</item>
+        <item>@string/salmon</item>
+        <item>@string/gilt_head_bream</item>
+        <item>@string/sea_bass</item>
+        <item>@string/red_mullet</item>
+    </string-array>
+
+    <string name="price_fish_text">Price: </string>
+    <string name="salmon_text">Salmon pieces</string>
+    <string name="gilt_head_bream_text">Gilt-head bream pieces</string>
+    <string name="sea_bass_text">Sea bass pieces</string>
+    <string name="red_mullet_text">Red mullet pieces</string>
+
+
+
+
+    //BUTCHER SHOP
+    <string name="butcher_shop">Butcher Shop Paco</string>
+    <string name="selected_meat">Select the meet</string>
+    <string name="cow">Cow</string>
+    <string name="chicken">Chicken</string>
+    <string name="pig">Pig</string>
+    <string name="mince">Mince</string>
+
+    <string-array name="select_meat">
+        <item>@string/selected_meat</item>
+        <item>@string/cow</item>
+        <item>@string/chicken</item>
+        <item>@string/pig</item>
+        <item>@string/mince</item>
+    </string-array>
+
+    <string name="price_meat_text">Price: </string>
+    <string name="cow_text">Cow pieces</string>
+    <string name="chicken_text">Chicken pieces</string>
+    <string name="pig_text">Pig pieces</string>
+    <string name="mince_text">Mince pieces</string>
+
+
+    //SPORT SHOP
+    <string name="sport_shop">Sport Shop Paco</string>
+    <string name="selected_sport">Select the item sport</string>
+    <string name="ball_soccer">Ball soccer</string>
+    <string name="ball_basket">Ball basket</string>
+    <string name="ball_tennis">Ball tennis</string>
+    <string name="ball_baseball">Ball baseball</string>
+
+    <string-array name="select_sport">
+        <item>@string/selected_sport</item>
+        <item>@string/ball_soccer</item>
+        <item>@string/ball_basket</item>
+        <item>@string/ball_tennis</item>
+        <item>@string/ball_baseball</item>
+    </string-array>
+
+    <string name="price_sport_text">Price: </string>
+    <string name="ball_soccer_text">Number ball soccer</string>
+    <string name="ball_basket_text">Number ball basket</string>
+    <string name="ball_tennis_text">Number ball tennis</string>
+    <string name="ball_baseball_text">Number ball baseball</string>
+
+    //LABEL
+    <string name="label_fruit_shop">Fruit Shop</string>
+    <string name="label_fish_market">Fish Market</string>
+    <string name="label_butcher_shop">Butcher Shop</string>
+    <string name="label_sport_shop">Sport Shop</string>
+    <string name="label_menu">Menu</string>
+    <string name="label_basket">Basket</string>
+
+    //DRAWER
+    <string name="user_text">User</string>
+    <string name="inbox_text">Inbox</string>
+    <string name="chat_text" translatable="false">Chat</string>>
+    <string name="basket_text">Total Basket</string>
+
+    //USER
+    <string name="user">User</string>
+    <string name="sing_up">Sign up</string>
+    <string name="sign_in">Sign in</string>
+    <string name="password">Password</string>
+    <string name="welcome_user">Register</string>
+    <string name="register_user">Register User</string>
+    <string name="log_out">Log Out</string>
+    <string name="text_user_welcome">Welcome</string>
+    <string name="text_registered_user">The user has already been registered</string>
+    <string name="text_user_no_registered">The user dont not exist, register</string>
+    <string name="text_incorrect_password">Incorrect password</string>
+
+
+    //CHAT
+    <string name="chat_header">Chat of shop</string>
+    <string name="send_text">Write here</string>
+    <string name="send">Send</string>
+    <string name="unregistered_user">Unregistered user, please log in</string>
+
+    //INBOX
+    <string name="inbox_header">Inbox of shop</string>
+    <string name="your_message">Your messages:</string>
+    <string name="delete_message">Delete messages</string>
+
+    //BASKET
+    <string name="buy_all">Buy</string>
+    <string name="remove_item">Remove</string>
+
+    //PURCHASE PROCESS
+    <string name="purchase_title">CHECKOUT</string>
+    <string name="purchase_title_text">Checkout</string>
+    <string name="buy_process_title">1. PAYMENT METHOD</string>
+    <string name="card_number">card number</string>
+    <string name="expire_date">expiration date: XX/XX</string>
+    <string name="cvc_number">CVC</string>
+    <string name="address_text">2. ADDRESS</string>
+    <string name="city_text">city</string>
+    <string name="street_text">street</string>
+    <string name="number_text">number</string>
+    <string name="pay_text">PAY</string>
+    <string name="total_text">TOTAL: </string>
+    <string name="buy_text">BUY</string>
+    <string name="back_text">BACK TO THE BASKET</string>
+    <string name="wrong_field">Make sure all fields are right</string>
+    <string name="country_text">country</string>
+
+
+    //PURCHASE COMPLETED
+
+    <string name="purchase_confirmed">PURCHASE CONFIRMED</string>
+    <string name="purchase_confirmed_text">Purchase Confirmed</string>
+    <string name="thank_you">THANK YOU FOR BUYING AT SHOPS PACO</string>
+    <string name="back_button">MAIN PAGE</string>
+
+
+
+    <string name="price_unit_fish_text" >Price/unit:</string>
+    <string name="price_unit_fruit_text" >Price/unit:</string>
+    <string name="price_unit_meat_text" >Price/unit:</string>
+    <string name="price_unit_sport_text" >Price/unit:</string>
+
+
+</resources>
