@@ -11,7 +11,7 @@
 >## Introducción
 <br>
 
-El objetivo principal de esta aplicación es crear una plataforma cuya funcionalidad sea que los usuarios realizar compras online en Tiendas Paco en las que podemos encontrar las diferentes secciones como frutería, carnicería, pescadería y tienda de deportes y, así, poder llegar al mayor número de clientes posible.
+El objetivo principal de esta aplicación es crear una plataforma cuya funcionalidad sea que los usuarios puedan realizar compras online en Tiendas Paco. Podemos encontrar diferentes secciones como frutería, carnicería, pescadería y tienda de deportes y, así, poder llegar al mayor número de clientes posible.
 <br>
 <br>
 
@@ -26,12 +26,12 @@ Abrimos la aplicación Android Studio y creamos un nuevo proyecto. Para ello, en
 <br>
 
 Para el desarrollo de esta aplicación creamos un proyecto con el IDE Android Studio utilizando como lenguaje Kotlin.
-Al crear un proyecto de Kotlin en Android Studio, se genera la carpeta "app" y la carpeta "gradle". Cuando creamos el proyecto, el sistema crea "app" y la aplicación lanza una "activity" (pantalla).
+Al crear un proyecto de Kotlin en Android Studio, se genera la carpeta "app" y la carpeta "gradle". 
 
-A. La carpeta "app" contiene el software relacionado con nuestra aplicación, donde incluiremos los archivos necesarios para que nuestra aplicación sea empaquetada. Dentro de esta carpeta, podemos acceder a otras. Por ejemplo en la carpeta manifests, podemos observar el archivo AndroidManifest.xml en que se declara todo aquello que realiza nuestra aplicación, así como si requiere unos permisos... En la carpeta res, podemos encontrar otras subcarpetas, como por ejemplo, layout que contiene el archivo activity_main.xml. Si accedemos a ese archivo y en la barra de herramientas del archivo en el margen superior derecho,hacemos clic en Split, aparece una representación de nuestra aplicación. Los layouts son unos contenedores y se utilizan para dar formato al diseño de nuestra aplicación introduciendo elementos como botones, spinner, seekbar textos...
+A. Cuando creamos el proyecto, el sistema crea "app" y la aplicación lanza una "activity" (pantalla). La carpeta "app" contiene el software relacionado con nuestra aplicación, donde incluiremos los archivos necesarios para que nuestra aplicación sea empaquetada. Dentro de esta carpeta, podemos acceder a otras.
 
 1. Manifests:
-    En este directorio se encuentra el archivo AndroidManifest.xml. Es un archivo de configuración que proporciona información esencial sobre la aplicación al sistema operativo Android. En este archivo hemos declarado el logo de nuestra aplicación para que cuando ejecutemos nuestra aplicación en un dispositivo, podamos ver en la miniatura de nuestra aplicación la imagen de dicho logo.
+    En este directorio se encuentra el archivo AndroidManifest.xml en el que se declara todo aquello que realiza nuestra aplicación, así como si requiere unos permisos.... Es un archivo de configuración que proporciona información esencial sobre la aplicación al sistema operativo Android. En este archivo hemos declarado el logo de nuestra aplicación para que cuando ejecutemos nuestra aplicación en un dispositivo, podamos ver en la miniatura de nuestra aplicación la imagen de dicho logo.
 
 2. Java:
     <br>
@@ -113,12 +113,12 @@ En la parte de navegación se ha implementado un práctico "Drawer Menu", lo que
 
 Al desplegar el "Drawer Menu", en primer lugar aparecerá en la parte superior el logo de la empresa. Debajo de este, se encuentran cuatro opciones de navegación que nos permiten acceder a las diferentes secciones de la aplicación. Cada opción se representa con un icono específico y su respectivo nombre:
 
-1. El primer icono que aparece en el "Drawer Menu" es el "User". Al seleccionar esta opción, la aplicación nos llevará a un formulario en el que el usuario puede iniciar sesión en la cuenta de usuario o bien, crear una nueva cuenta y registrarse. Este formulario consta de dos campos: "User" y "Password". Si el usuario ya tiene una cuenta, puede ingresar su información en los campos de usuario y contraseña y luego hacer clic en el botón "Sign In" para acceder a la cuenta. Si el usuario no tiene una cuenta, se puede registrar rellenando los campos de usuario y contraseña y hacer clic en el botón "Sign Up". En ambos casos, si los campos de usuario y contraseña no contienen texto o se dejan sin rellenar, no se podrá iniciar sesión ni registrarse, es decir, los botones de "Sign In" y "Sign Up" no funcionan. Una vez que el usuario ha iniciado sesión en su cuenta o se ha registrado, la aplicación nos llevará a la misma pantalla del "User" donde se le dará la bienvenida junto con su nombre de usuario y se le brindará la opción de cerrar sesión gracias a un botón. Si el usuario decide cerrar sesión, volverá a la pantalla de inicio de sesión y registro con los formularios disponibles. Si el usuario intenta registrarse con una cuenta de usuario ya existente, al hacer clic en el boton de registrarse, aparecerá un mensaje para avisar al usuario de que la cuenta de ese usuario ya existe. Si el usuario intenta iniciar sesión con una cuenta de usuario que no existe, aparecerá un mensaje para avisar al usuario de que el usuario no existe,regístrese.Por último, si el usuario intenta iniciar sesión con una cuenta de usuario que existe, pero introduce una contraseña incorrecta, aparecerá un mensaje para avisar al usuario de que la contraseña es incorrecta.
-Además, si el usuario no ha iniciado sesión con su cuenta o no está registrado, cuando desee finalizar su compra y haga clic en el botón de comprar, este botón estará desactivado y no podrar finalizar la misma.
+1. El primer icono que aparece en el "Drawer Menu" es el "User". Al seleccionar esta opción, la aplicación nos llevará a un formulario en el que el usuario puede iniciar sesión en la cuenta de usuario o bien, crear una nueva cuenta y registrarse. Este formulario consta de dos campos: "User" y "Password". Si el usuario ya tiene una cuenta, puede ingresar su información en los campos de usuario y contraseña y luego hacer clic en el botón "Sign In" para acceder a la cuenta. Si el usuario no tiene una cuenta, se puede registrar rellenando los campos de usuario y contraseña y hacer clic en el botón "Sign Up". En ambos casos, si los campos de usuario y contraseña no contienen texto o se dejan sin rellenar, no se podrá iniciar sesión ni registrarse, es decir, los botones de "Sign In" y "Sign Up" no funcionan. Una vez que el usuario ha iniciado sesión en su cuenta o se ha registrado, la aplicación nos llevará a la misma pantalla del "User" donde se le dará la bienvenida junto con su nombre de usuario y se le brindará la opción de cerrar sesión gracias a un botón. Si el usuario decide cerrar sesión, volverá a la pantalla de inicio de sesión y registro con los formularios disponibles. Si el usuario intenta registrarse con una cuenta de usuario ya existente, al hacer clic en el boton de registrarse, aparecerá un mensaje para avisar al usuario de que su cuenta ya existe. Si el usuario intenta iniciar sesión con una cuenta de usuario que no existe, aparecerá un mensaje para avisar al usuario de que el usuario no existe, regístrese. Por último, si el usuario intenta iniciar sesión con una cuenta de usuario que existe, pero introduce una contraseña incorrecta, aparecerá un mensaje para avisar al usuario de que la contraseña es incorrecta.
+Además, si el usuario no ha iniciado sesión con su cuenta o no está registrado, cuando desee finalizar su compra y haga clic en el botón de comprar, este botón estará desactivado y no podrá finalizar la misma.
 
 
 2. El segundo icono que aparece en el "Drawer Menu" es el "Chat". Al seleccionar esta opción, la aplicación nos llevará a una pantalla de chat simulado donde el usuario puede interactuar con la tienda. El usuario puede escribir mensajes en el campo de entrada y enviarlos presionando el botón "Enviar". Los mensajes aparecerán en la ventana de chat, debajo del último mensaje enviado.
-Si el usuario sale de la pantalla del "Chat" y vuelve a ingresar, los mensajes que haya escrito anteriormente se habrán guardado y aparecerán en el chat. Esta función permite al usuario continuar con la conversación desde donde la dejó anteriormente. Si un usuario no registrado desea acceder al Chat, en la pantalla del Chat aparece un mensaje para avisar al usuario de que no está registrado para que inicie sesión y pueda escribir un mensaje en el chat. Solo pueden escribir un mensaje en el chat los usuarios que hayan iniciado sesión o que estén registrados.
+Si un usuario registrado abandona la pantalla del "Chat" y vuelve a ingresar, los mensajes que haya escrito anteriormente se habrán guardado y aparecerán en el chat. Esta función permite al usuario continuar con la conversación desde donde la dejó anteriormente. Si un usuario no registrado desea acceder al Chat, en la pantalla del Chat aparece un mensaje para avisar al usuario de que no está registrado para que inicie sesión y pueda escribir un mensaje en el chat. Solo pueden escribir mensajes en el chat los usuarios que hayan iniciado sesión o que estén registrados.
 
 
 3. El tercer icono que aparece en el "Drawer Menu" es el "Inbox". Al seleccionar esta opción, la aplicación nos llevará al inbox de la tienda, donde el usuario puede ver todos los mensajes enviados.
@@ -127,11 +127,8 @@ Si el usuario ha enviado algún mensaje, se proporcionará un botón que permite
 
 4. El cuarto icono que aparece en el "Drawer Menu" es el "Total Basket". Al seleccionar esta opción, la aplicación llevará al usuario a la pantalla que muestra la lista de todos los productos que han sido seleccionados en la frutería, carnicería, pescadería y tienda de deportes, junto con la cantidad de cada item que se ha seleccionado. Se puede eliminar cada producto añadido a la cesta si lo desea haciendo clic en el icono de eliminar.
 En la parte inferior de la cesta, aparecerá el precio total de la compra. Esta función permite al usuario tener una vista general de todo lo que ha seleccionado y asegurarse de que no haya errores.
-Se proporcionarán dos botones, uno para vaciar la cesta y otro para finalizar la compra. El botón "Vaciar cesta" permite al usuario eliminar todos los productos que ha seleccionado. El botón "Comprar" permite al usuario "finalizar la compra". Este botón se deshabilita si el usuario no ha iniciado sesión o no está registrado y, por tanto, no puede realizar la compra. Si el usuario ha iniciado sesión o está registrado, y selecciona el botón "Comprar", es dirigido a otra pantalla para tramitar la compra en la que se le pide al usuario que introduzca sus datos de método de pago y su dirección. En el apartado de Método de Pago, el campo de número de tarjeta tiene que ser de 16 dígitos numéricos, el campo de fecha tiene que tener el formato MM/AA, siendo MM el mes y AA las dos últimas cifras del año, el campo de CVC tiene que ser de 3 dígitos numéricos; en el apartado Dirección, todos los campos tienen que ser strings, excepto el campo número que tiene que ser un número. Si en alguno de los campos de esta pantalla, el usuario introduce datos que no cumplen las características anteriormente citadas, dicho usuario no puede finalizar la compra.
-
-
-
-En esta pantalla, aparecen dos botones, el botón de "Comprar" para realizar la compra ya una vez introducidos los datos requeridos y el botón "Cesta" por si el usuario quiere consultar los productos que tiene en la cesta antes de finalizar la compra. Si el usuario pulsa el botón "Comprar", se le redirige a otra pantalla en la que se confirma la compra realizada y puede volver a la página principal de nuestra tienda si lo desea clicando en el botón de "Página principal".
+Se proporcionarán dos botones, uno para vaciar la cesta y otro para finalizar la compra. El botón "Vaciar cesta" permite al usuario eliminar todos los productos que ha seleccionado. El botón "Comprar" permite al usuario realizar la compra. Este botón se deshabilita si el usuario no ha iniciado sesión o no está registrado y, por tanto, no puede realizar la compra. Si el usuario ha iniciado sesión o está registrado, y selecciona el botón "Comprar", es dirigido a otra pantalla para tramitar la compra en la que se le pide al usuario que introduzca sus datos de método de pago y su dirección. En el apartado de Método de Pago, el campo de número de tarjeta tiene que ser de 16 dígitos numéricos, el campo de fecha tiene que tener el formato MM/AA, siendo MM las dos cifras del mes y AA las dos últimas cifras del año, el campo de CVC tiene que ser de 3 dígitos numéricos; en el apartado Dirección, todos los campos tienen que ser strings, excepto el campo número que tiene que ser un número. Si en alguno de los campos de esta pantalla, el usuario introduce datos que no cumplen las características anteriormente citadas, dicho usuario no puede finalizar la compra.
+ En esta pantalla, aparecen dos botones, el botón de "Comprar" para realizar la compra ya una vez introducidos los datos requeridos y el botón "Cesta" por si el usuario quiere consultar los productos que tiene en la cesta antes de finalizar la compra. Si el usuario pulsa el botón "Comprar", se le redirige a otra pantalla en la que se confirma la compra realizada y puede volver a la página principal de nuestra tienda si lo desea clicando en el botón de "Página principal".
 
 
 <br>
@@ -140,7 +137,7 @@ Si accedemos a la sección de frutería desde la pantalla principal, seremos lle
 Al desplegar el spinner, se mostrarán las frutas disponibles con sus respectivas imágenes. Al seleccionar una fruta, aparecerá un "SeekBar" que nos permitirá seleccionar la cantidad que deseamos de la fruta elegida. Una vez seleccionada la cantidad, se mostrará el precio por unidad y el precio de la fruta asociado a la cantidad elegida. Si pulsamos el botón "Add", la fruta será añadida a la cesta. La cesta se actualizará y mostrará la foto del producto y la cantidad seleccionada. Se puede eliminar cada producto añadido a la cesta si lo desea haciendo clic en el icono de eliminar. Además, se actualizará el precio de la cesta de frutas y el precio total de la compra.
 La aplicación proporcionará la opción de vaciar la cesta de frutas solo si hay elementos en ella.
 Si seleccionamos "Select the fruit" en el spinner (el elemento neutro), los elementos para añadir una fruta como el SeekBar, botón "Add"... desaparecerán de la vista del usuario.
-Si seleccionamos el icono "Total Basket", seremos llevados a la cesta total donde aparecerán todos los elementos de cualquier sección que hayamos seleccionado para comprar, junto con el precio total de toda la compra.
+Si seleccionamos el icono "Total Basket", seremos llevados a la pantalla de cesta total donde aparecerán todos los elementos de cualquier sección que hayamos seleccionado para comprar, junto con el precio total de toda la compra.
 
 <br>
 
@@ -165,38 +162,33 @@ Cuando accedamos a cualquiera de las secciones de la aplicación, se mostrará a
 Los extras que se han incluido en la aplicación son:
 
 * Definición de un nombre para la aplicación "Tiendas Paco".
-* Se ha limitado la prueba de concepto a cuatro productos de cada tipo.
-* Soporte multilenguaje Inglés/Español según la configuración del teléfono.
-* Persistencia de la información entre cambios de orientación.
-* Las pantallas horizontal y vertical tendrán un layout diferente acorde con el espacio proporcionado. En algunos casos hemos utilizado un ScrollView.
+* Se ha limitado la prueba de concepto a cuatro productos de cada sección.
 * Fotografía del producto en las opciones del Spinner.
 * Fotografía del producto en los productos añadidos a la cesta.
-* Evitar tener que pulsar el botón para seleccionar una producto en el Spinner
-* Se muestra el precio/pieza del producto seleccionado.
+* Evitar tener que pulsar el botón para seleccionar un producto en el Spinner.
+* Se muestra el precio/unidad del producto seleccionado.
 * Dos opciones de acceso para el usuario: iniciar sesión o registrarse.
 * Guardar el nombre del usuario que inició la sesión.
 * Posibilidad de cerrar la sesion si el usuario inició la sesión anteriormente.
-* "Flecha Hacia Atrás" que permite volver a la pantalla anterior.
 * En el drawer menu se encuentra un botón para acceder a User, Chat, Inbox y Total Basket.
 * Cambio automatico del "Drawer Menu" por una "Flecha Hacia Atrás" para poder acceder a la anterior pantalla.
 * En la barra de título superior de la aplicación aparece el nombre de la pantalla en la que nos situamos.
-* Posibilidad de vaciar la cesta de una sección.
-* Posibilidad de vaciar la cesta total.
-* Posibilidad de vaciar cada tipo de producto en la cesta total.
-* Posibilidad de comprar los productos que hay en la cesta total.
-* No permitir que el usuario inicie sesion o cree una cuenta si todos los campos no estan rellenos.
-* Boton dentro del Inbox que permite borrar los mensajes escritos por el usuario.
-* Logica de negicio del User.
-* Logica de negocio del Chat.
-* Logica de negocio del Inbox.
-* Todos los recursos se han definido en el directorio res siguiendo un modelo de buenas prácticas.
+* Posibilidad de vaciar la cesta total de una sección y eliminar cada producto de dicha sección.
+* Posibilidad de vaciar la cesta total y en esta, eliminar cada producto de las diferentes secciones.
+* Posibilidad de comprar los productos que hay en la cesta total (solo si el ususario está registrado).
+* No permitir que el usuario inicie sesion o cree una cuenta si los campos de usuario y contraseña no estan rellenos.
+* No permitir que el usuario finalize la compra si todos los campos de método de pago y dirección no estan rellenos o tienen un formato incorrecto.
+* Boton dentro del Inbox que permite borrar los mensajes escritos por el usuario (solo si el ususario está registrado).
 * Inicio o registro de un usuario:
     * Control inicio de sesion de usuario incorrecto.
     * Control inicio de sesión de contraseña incorrecta.
     * Control de registro usuario repetido.
     * Control inicio de sesión/registro de campos usuario y contraseña completos.
+* Logica de negicio del User.
+* Logica de negocio del Chat.
+* Logica de negocio del Inbox.
 * Mejora que haga la pantalla más atractiva desde el punto de vista funcional como:
-    * Logo de la empresa
+    * Logo de la empresa en el drawer menu y en la miniatura de la aplicación en el dispositivo móvil.
     * Cambio de color de los elementos en función del fragment.
     * Delimitación de la cesta entre barras.
     * Integracion de iconos en las respectivas secciones.
@@ -205,12 +197,17 @@ Los extras que se han incluido en la aplicación son:
     * Cambio de color del SeekBar. 
     * Cambio de nombre del Navigation en función del fragment. 
     Para ello, se han utilizado: padding, gravity, layout_gravity, layout_height, layout_weight, layout_margin (Top, Bottom, Start, End), textColor, progressTint, textSize, backgroundTint, textStyle...
+* Soporte multilenguaje Inglés/Español e Inglés/Francés según la configuración del teléfono.
+* Persistencia de la información entre cambios de orientación.
+* Las pantallas horizontal y vertical tendrán un layout diferente acorde con el espacio proporcionado. En algunos casos hemos utilizado un ScrollView.
+* La aplicación vista en la tablet tendrá layouts diferentes acorde con las dimensiones de la misma.
 * Almacenar los datos (usuario y contraseña) de los usuarios en la base de datos SQLite utilizando Room.
 * Añadir elementos de forma dinámica utilizando RecyclerView.
+* Todos los recursos se han definido en el directorio res siguiendo un modelo de buenas prácticas.
 
 <br>
 
->## Explicación de conceptos
+>## Explicación de herramientas
 <br>
 
 Para la realizacion de la practica ha sido necesario introducir nuevas librerias y nuevos conceptos.
@@ -219,7 +216,7 @@ Para la realizacion de la practica ha sido necesario introducir nuevas librerias
 
 - LiveData: es una clase que se utiliza para almacenar y observar datos. Los objetos LiveData son observados desde el ViewModel y actualizados automáticamente cuando cambian los datos.
 
-- Romm: es una biblioteca de persistencias de datos que forma parte de Android Jetpack. Es una capa de abstracción que se ubica sobre una base de datos SQLite. SQLite usa un lenguaje especializado (SQL) para realizar operaciones de bases de datos. En lugar de usar SQLite directamente, Room simplifica las tareas de implementar, configurar y usar la base de datos. Room también proporciona comprobaciones de tiempo de compilación de las sentencias de SQLite. Hemos utilizado Room para almacenar los datos (usuario y contraseña) de los usuarios en la base de datos SQLite.
+- Room: es una biblioteca de persistencias de datos que forma parte de Android Jetpack. Es una capa de abstracción que se ubica sobre una base de datos SQLite. SQLite usa un lenguaje especializado (SQL) para realizar operaciones de bases de datos. En lugar de usar SQLite directamente, Room simplifica las tareas de implementar, configurar y usar la base de datos. Room también proporciona comprobaciones de tiempo de compilación de las sentencias de SQLite. Hemos utilizado Room para almacenar los datos (usuario y contraseña) de los usuarios en la base de datos SQLite.
 
 - RecyclerView: RecyclerView facilita la visualización eficiente de grandes conjuntos de datos. El programador suministra los datos y define cómo se ve cada elemento, y la biblioteca RecyclerView crea dinámicamente los elementos cuando son necesarios. Como su nombre lo indica, RecyclerView recicla las vistas de elementos para que el desplazamiento sea más eficaz. Cuando un el elemento se desplaza fuera de la pantalla, RecyclerView no destruye su vista. En cambio, RecyclerView reutiliza la vista para nuevos elementos que se han desplazado en pantalla. RecyclerView mejora el rendimiento y la capacidad de respuesta de su aplicación, y reduce el consumo de energía. Hemos utilizado RecyclerView para añadir elementos de forma dinámica. Con esto conseguimos menor número de items en los layouts.
 <br>
@@ -241,7 +238,7 @@ Para la realizacion de la practica ha sido necesario introducir nuevas librerias
 >## Creación de dispositivos
 <br>
 
-Después, creamos el dispositivo. Si nuestro dispositivo es un Smarthphone, en la barra de herramientas del margen superior derecho, hacemos clic en Device Manager, en la pestaña de Virtual, clicamos en Create device. Se muestra una ventana para seleccionar el hardware, seleccionamos: Pixel 6 como definición del dispositivo, Oreo (API Level 27) como imagen del sistema (tiene que ser descargada), Portrait como orientación de inicio y clicamos en Finish. Ya tenemos nuestro dispositivo creado. Si nuestro dispositivo es una tablet, configuramos dicha tablet en modo desarrollador, en las opciones de este modo, seleccionamos las opciones: Depuración de USB y verificar aplicaciones por USB.
+Después, creamos el dispositivo. Si nuestro dispositivo es un Smarthphone, en la barra de herramientas del margen superior derecho, hacemos clic en Device Manager, en la pestaña de Virtual, clicamos en Create device. Se muestra una ventana para seleccionar el hardware, seleccionamos: Pixel 6 como definición del dispositivo, Oreo (API Level 27) como imagen del sistema (tiene que ser descargada), Portrait como orientación de inicio y clicamos en Finish. Ya tenemos nuestro dispositivo creado. Si nuestro dispositivo es una tablet, configuramos dicha tablet en modo desarrollador, en las opciones de este modo, seleccionamos las opciones: "Depuración de USB2 y "Verificar aplicaciones por USB".
 <br>
 <br>
 
@@ -269,20 +266,38 @@ A continuación se muestran las imágenes de nuestra aplicación en español.
 
 ![menu](images/menu.png)
 ![drawer_menu](images/drawer_menu.png)
+<br>
+
 ![user_noRegister](images/user_noRegister.png)
 ![user_register](images/user_register.png)
+<br>
+
 ![chat](images/chat.png)
 ![chat_noRegistered](images/chat_noRegistered.png)
+<br>
+
 ![inbox](images/inbox.png)
 ![inbox_noRegistered](images/inbox_noRegistered.png)
+<br>
+
 ![fruit_shop](images/fruit_shop.png)
+<br>
+
 ![horizontal_español](images/horizontal_español.png)
+<br>
+
 ![butcher](images/butcher.png)
 ![fish_shop](images/fish_shop.png)
+<br>
+
 ![sport_shop](images/sport_shop.png)
 ![buy_basket](images/buy_basket.png)
+<br>
+
 ![enabled_button](images/enabled_button.png)
 ![confirmed_basket](images/confirmed_basket.png)
+<br>
+
 ![confirmation](images/confirmation.png)
 
 <br>
@@ -295,7 +310,10 @@ A continuación se muestran dos imágenes en las que se ha cambiado el idioma de
 <br>
 
 ![inglesVertical](images/inglesVertical.png)
+<br>
+
 ![horizontal_ingles](images/horizontal_ingles.png)
+<br>
 
 <br>
 
@@ -306,7 +324,10 @@ A continuación se muestran dos imágenes en las que se ha cambiado el idioma de
 <br>
 
 ![francesVertical](images/francesVertical.png)
+<br>
+
 ![francesHorizontal](images/francesHorizontal.png)
+<br>
 
 <br>
 
