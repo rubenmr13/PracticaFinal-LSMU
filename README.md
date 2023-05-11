@@ -38,9 +38,9 @@ A. Cuando creamos el proyecto, el sistema crea "app" y la aplicación lanza una 
 
     2.1 ViewModel y LiveData:
 
-    Hemos creado distintos directorios en función de las funcionalidades de nuestra aplicación: basket, butcher, fishMarket, fruitShop, sportShop y user. Estos directorios se encuentran dentro del directorio java. Además, el el directorio java, encontramos los archivos: ChatFragment, InboxFragment, MainActivity, MenuFragment y ShopViewModel. Estos archivos no los hemos organizado en directorios ya que comparten los mismos datos y, por tanto, utilizan el mismo ViewModel "ShopViewModel".
+    Hemos creado distintos directorios en función de las funcionalidades de nuestra aplicación: basket, butcher, fishMarket, fruitShop, sportShop y user. Estos directorios se encuentran dentro del directorio java. Además, en el directorio java, encontramos los archivos: ChatFragment, InboxFragment, MainActivity, MenuFragment y ShopViewModel. Estos archivos no los hemos organizado en directorios ya que comparten los mismos datos y, por tanto, utilizan el mismo ViewModel "ShopViewModel".
 
-    Para implementar el ViewModel y el LiveData es necesario crear una nueva clase que permita separar la lógica de la interfaz de usuario de la actividad o el fragmento de la logica de negocio.
+    Para implementar el ViewModel y el LiveData es necesario crear una nueva clase que permita separar la lógica de la interfaz de usuario de la actividad o el fragmento de la lógica de negocio.
     
     En esta práctica, se ha implementado una clase ViewModel para cada fragmento, a excepción de aquellos fragmentos que compartían datos, los cuales han usado la misma clase ViewModel como hemos citado anteriormente.
     Estos fragmentos se encuentran en el directorio java.
@@ -76,11 +76,11 @@ A. Cuando creamos el proyecto, el sistema crea "app" y la aplicación lanza una 
 
     3.1 Layouts:
 
-    El directorio layouts contiene los archivos en los que se han definido los distintos elementos para perfeccionar la vista de nuestra aplicacion teniendo en cuenta las distintas secciones cuando presenta orientación vertical y, los layouts (land) en los que se han definido los distintos elementos para perfeccionar la vista de nuestra aplicacion cuando presenta orientación horizontal. Contiene el archivo activity_main.xml. Si accedemos a ese archivo y en la barra de herramientas del archivo en el margen superior derecho, hacemos clic en Split, aparece una representación de nuestra aplicación. Los layouts son unos contenedores y se utilizan para dar formato al diseño de nuestra aplicación introduciendo elementos como botones, spinner, seekbar textos... Además, se ha creado el fichero itemspinner.xml que contiene las vistas del texto e imagen del producto seleccionado en el spinner de cada sección de la tienda y el fichero nav_header.xml que contiene los elementos para dar vista a la pestaña de menú de nuestra aplicación. Estos ficheros se encuentran en el directorio layout que se encuentra dentro del directorio res.
+    El directorio layouts contiene los archivos en los que se han definido los distintos elementos para perfeccionar la vista de nuestra aplicacion teniendo en cuenta las distintas secciones cuando presenta orientación vertical y, los layouts (land) en los que se han definido los distintos elementos para perfeccionar la vista de nuestra aplicación cuando presenta orientación horizontal. Contiene el archivo activity_main.xml. Si accedemos a ese archivo y en la barra de herramientas del archivo en el margen superior derecho, hacemos clic en Split, aparece una representación de nuestra aplicación. Los layouts son unos contenedores que se utilizan para dar formato al diseño de nuestra aplicación introduciendo elementos como botones, spinner, seekbar textos... Además, se ha creado el fichero itemspinner.xml que contiene las vistas del texto e imagen del producto seleccionado en el spinner de cada sección de la tienda y el fichero nav_header.xml que contiene los elementos para dar vista a la pestaña de menú de nuestra aplicación. Estos ficheros se encuentran en el directorio layout que se encuentra dentro del directorio res.
 
     3.2 Drawable:
 
-    Todas las imagenes de los distintos tipos de productos disponibles en la tienda que se usan en la aplicación están en el directorio drawable, que se encuentra dentro del directorio res.
+    Todas las imágenes de los distintos tipos de productos disponibles en la tienda que se usan en la aplicación están en el directorio drawable, que se encuentra dentro del directorio res.
 
     3.3 Menu:
 
@@ -88,7 +88,7 @@ A. Cuando creamos el proyecto, el sistema crea "app" y la aplicación lanza una 
 
     3.4 Navegacion:
 
-    Para la realización de la navegacion, es necesario crearnos una nueva carpeta que sea de tipo "Navigation", definir un grafo de navegación xml (en nuestro caso se llama "navigation.xml") que será el encargado de realizar la navegación.
+    Para la realización de la navegación, es necesario crearnos una nueva carpeta que sea de tipo "Navigation", definir un grafo de navegación xml (en nuestro caso se llama "navigation.xml") que será el encargado de realizar la navegación.
 
     3.5 Values:
 
@@ -176,22 +176,22 @@ Los extras que se han incluido en la aplicación son:
 * Posibilidad de vaciar la cesta total de una sección y eliminar cada producto de dicha sección.
 * Posibilidad de vaciar la cesta total y en esta, eliminar cada producto de las diferentes secciones.
 * Posibilidad de comprar los productos que hay en la cesta total (solo si el ususario está registrado).
-* No permitir que el usuario inicie sesion o cree una cuenta si los campos de usuario y contraseña no estan rellenos.
-* No permitir que el usuario finalize la compra si todos los campos de método de pago y dirección no estan rellenos o tienen un formato incorrecto.
-* Boton dentro del Inbox que permite borrar los mensajes escritos por el usuario (solo si el ususario está registrado).
+* No permitir que el usuario inicie sesión o cree una cuenta si los campos de usuario y contraseña no estan rellenos.
+* No permitir que el usuario finalize la compra si todos los campos de método de pago y dirección no están rellenos o tienen un formato incorrecto.
+* Botón dentro del Inbox que permite borrar los mensajes escritos por el usuario (solo si el ususario está registrado).
 * Inicio o registro de un usuario:
-    * Control inicio de sesion de usuario incorrecto.
+    * Control inicio de sesión de usuario incorrecto.
     * Control inicio de sesión de contraseña incorrecta.
     * Control de registro usuario repetido.
     * Control inicio de sesión/registro de campos usuario y contraseña completos.
-* Logica de negicio del User.
-* Logica de negocio del Chat.
-* Logica de negocio del Inbox.
+* Lógica de negocio del User.
+* Lógica de negocio del Chat.
+* Lógica de negocio del Inbox.
 * Mejora que haga la pantalla más atractiva desde el punto de vista funcional como:
     * Logo de la empresa en el drawer menu y en la miniatura de la aplicación en el dispositivo móvil.
     * Cambio de color de los elementos en función del fragment.
     * Delimitación de la cesta entre barras.
-    * Integracion de iconos en las respectivas secciones.
+    * Integración de iconos en las respectivas secciones.
     * Letras de distinto tamaño y colores.
     * Botones de diferentes colores en función de su utilidad. 
     * Cambio de color del SeekBar. 
@@ -210,7 +210,7 @@ Los extras que se han incluido en la aplicación son:
 >## Explicación de herramientas
 <br>
 
-Para la realizacion de la practica ha sido necesario introducir nuevas librerias y nuevos conceptos.
+Para la realización de la práctica ha sido necesario introducir nuevas librerías y nuevos conceptos.
 
 - ViewModel: El ViewModel es responsable de mantener y administrar los datos relacionados con la interfaz de usuario, se ocupa de la supervivencia a los cambios de configuración
 
@@ -218,7 +218,7 @@ Para la realizacion de la practica ha sido necesario introducir nuevas librerias
 
 - Room: es una biblioteca de persistencias de datos que forma parte de Android Jetpack. Es una capa de abstracción que se ubica sobre una base de datos SQLite. SQLite usa un lenguaje especializado (SQL) para realizar operaciones de bases de datos. En lugar de usar SQLite directamente, Room simplifica las tareas de implementar, configurar y usar la base de datos. Room también proporciona comprobaciones de tiempo de compilación de las sentencias de SQLite. Hemos utilizado Room para almacenar los datos (usuario y contraseña) de los usuarios en la base de datos SQLite.
 
-- RecyclerView: RecyclerView facilita la visualización eficiente de grandes conjuntos de datos. El programador suministra los datos y define cómo se ve cada elemento, y la biblioteca RecyclerView crea dinámicamente los elementos cuando son necesarios. Como su nombre lo indica, RecyclerView recicla las vistas de elementos para que el desplazamiento sea más eficaz. Cuando un el elemento se desplaza fuera de la pantalla, RecyclerView no destruye su vista. En cambio, RecyclerView reutiliza la vista para nuevos elementos que se han desplazado en pantalla. RecyclerView mejora el rendimiento y la capacidad de respuesta de su aplicación, y reduce el consumo de energía. Hemos utilizado RecyclerView para añadir elementos de forma dinámica. Con esto conseguimos menor número de items en los layouts.
+- RecyclerView: RecyclerView facilita la visualización eficiente de grandes conjuntos de datos. El programador suministra los datos y define cómo se ve cada elemento, y la biblioteca RecyclerView crea dinámicamente los elementos cuando son necesarios. Como su nombre lo indica, RecyclerView recicla las vistas de elementos para que el desplazamiento sea más eficaz. Cuando un elemento se desplaza fuera de la pantalla, RecyclerView no destruye su vista. En cambio, RecyclerView reutiliza la vista para nuevos elementos que se han desplazado en pantalla. RecyclerView mejora el rendimiento y la capacidad de respuesta de su aplicación, y reduce el consumo de energía. Hemos utilizado RecyclerView para añadir elementos de forma dinámica. Con esto conseguimos menor número de items en los layouts.
 <br>
 <br>
 
@@ -238,7 +238,7 @@ Para la realizacion de la practica ha sido necesario introducir nuevas librerias
 >## Creación de dispositivos
 <br>
 
-Después, creamos el dispositivo. Si nuestro dispositivo es un Smarthphone, en la barra de herramientas del margen superior derecho, hacemos clic en Device Manager, en la pestaña de Virtual, clicamos en Create device. Se muestra una ventana para seleccionar el hardware, seleccionamos: Pixel 6 como definición del dispositivo, Oreo (API Level 27) como imagen del sistema (tiene que ser descargada), Portrait como orientación de inicio y clicamos en Finish. Ya tenemos nuestro dispositivo creado. Si nuestro dispositivo es una tablet, configuramos dicha tablet en modo desarrollador, en las opciones de este modo, seleccionamos las opciones: "Depuración de USB2 y "Verificar aplicaciones por USB".
+Después, creamos el dispositivo. Si nuestro dispositivo es un Smarthphone, en la barra de herramientas del margen superior derecho, hacemos clic en Device Manager, en la pestaña de Virtual, clicamos en Create device. Se muestra una ventana para seleccionar el hardware, seleccionamos: Pixel 6 como definición del dispositivo, Oreo (API Level 27) como imagen del sistema (tiene que ser descargada), Portrait como orientación de inicio y clicamos en Finish. Ya tenemos nuestro dispositivo creado. Si nuestro dispositivo es una tablet, configuramos dicha tablet en modo desarrollador, en las opciones de este modo, seleccionamos las opciones: "Depuración de USB2" y "Verificar aplicaciones por USB".
 <br>
 <br>
 
